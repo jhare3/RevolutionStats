@@ -1,0 +1,407 @@
+[
+  {
+    "name": "Brando Pratico",
+    "team": "Gray",
+    "number": "5"
+  },
+  {
+    "name": "Deng Adiang",
+    "team": "Gray",
+    "number": "4"
+  },
+  {
+    "name": "Dylan Pratico",
+    "team": "Gray",
+    "number": "3"
+  },
+  {
+    "name": "Jake Dion",
+    "team": "Gray",
+    "number": "2"
+  },
+  {
+    "name": "John Helsel",
+    "team": "Gray",
+    "number": "0"
+  },
+  {
+    "name": "Lester Abayan",
+    "team": "Gray",
+    "number": "6"
+  },
+  {
+    "name": "Mahlik Franklin",
+    "team": "Gray",
+    "number": "1"
+  },
+  {
+    "name": "Paul Gutierrez",
+    "team": "Gray",
+    "number": "8"
+  },
+  {
+    "name": "Sub Jordan",
+    "team": "Gray",
+    "number": "00"
+  },
+  {
+    "name": "Sub Tacey",
+    "team": "Gray",
+    "number": "55"
+  },
+  {
+    "name": "Austin Mayo",
+    "team": "Yellow",
+    "number": "6"
+  },
+  {
+    "name": "Brandon Bigelow",
+    "team": "Yellow",
+    "number": "1"
+  },
+  {
+    "name": "Jack Lloyd",
+    "team": "Yellow",
+    "number": "8"
+  },
+  {
+    "name": "Kassian Prior",
+    "team": "Yellow",
+    "number": "4"
+  },
+  {
+    "name": "Kyle Haley",
+    "team": "Yellow",
+    "number": "5"
+  },
+  {
+    "name": "Manny Robertson",
+    "team": "Yellow",
+    "number": "0"
+  },
+  {
+    "name": "Miles Robertson",
+    "team": "Yellow",
+    "number": "2"
+  },
+  {
+    "name": "Reg Dailey",
+    "team": "Yellow",
+    "number": "3"
+  },
+  {
+    "name": "Alex Philo",
+    "team": "Orange",
+    "number": "1"
+  },
+  {
+    "name": "Bela Dobkowski",
+    "team": "Orange",
+    "number": "5"
+  },
+  {
+    "name": "Cam Perta",
+    "team": "Orange",
+    "number": "9"
+  },
+  {
+    "name": "Drew Pelkey",
+    "team": "Orange",
+    "number": "4"
+  },
+  {
+    "name": "Dylan Mackie",
+    "team": "Orange",
+    "number": "0"
+  },
+  {
+    "name": "Hayden",
+    "team": "Orange",
+    "number": "3"
+  },
+  {
+    "name": "Logan Letourneau",
+    "team": "Orange",
+    "number": "6"
+  },
+  {
+    "name": "Bryan Rivera",
+    "team": "Purple",
+    "number": "7"
+  },
+  {
+    "name": "Chris Cayole",
+    "team": "Purple",
+    "number": "6"
+  },
+  {
+    "name": "Fin Mitchell",
+    "team": "Purple",
+    "number": "3"
+  },
+  {
+    "name": "Kaleb Swetty",
+    "team": "Purple",
+    "number": "4"
+  },
+  {
+    "name": "Kolby Bradford",
+    "team": "Purple",
+    "number": "0"
+  },
+  {
+    "name": "Logan Tobin",
+    "team": "Purple",
+    "number": "2"
+  },
+  {
+    "name": "Stanley Salley",
+    "team": "Purple",
+    "number": "1"
+  },
+  {
+    "name": "Wyatt Jarvis-comi",
+    "team": "Purple",
+    "number": "5"
+  },
+  {
+    "name": "Andy Bousono",
+    "team": "White",
+    "number": "0"
+  },
+  {
+    "name": "Isaiah Terrill",
+    "team": "White",
+    "number": "1"
+  },
+  {
+    "name": "Jack Goga-blanchard",
+    "team": "White",
+    "number": "9"
+  },
+  {
+    "name": "Joe Ruggles",
+    "team": "White",
+    "number": "4"
+  },
+  {
+    "name": "John O'brien",
+    "team": "White",
+    "number": "6"
+  },
+  {
+    "name": "Kenny Black",
+    "team": "White",
+    "number": "1"
+  },
+  {
+    "name": "Tanner Freeman",
+    "team": "White",
+    "number": "3"
+  },
+  {
+    "name": "Tyrone Conley",
+    "team": "White",
+    "number": "5"
+  },
+  {
+    "name": "Avery Barrino",
+    "team": "Blue",
+    "number": "4"
+  },
+  {
+    "name": "Dylan Hill-Quintin",
+    "team": "Blue",
+    "number": "0"
+  },
+  {
+    "name": "Ethan Calle",
+    "team": "Blue",
+    "number": "8"
+  },
+  {
+    "name": "Jerome Stewart",
+    "team": "Blue",
+    "number": "5"
+  },
+  {
+    "name": "Jonathan Billado",
+    "team": "Blue",
+    "number": "7"
+  },
+  {
+    "name": "Jordan Maille",
+    "team": "Blue",
+    "number": "0"
+  },
+  {
+    "name": "Nate Luong",
+    "team": "Blue",
+    "number": "1"
+  },
+  {
+    "name": "Tavarius Vance",
+    "team": "Blue",
+    "number": "2"
+  },
+  {
+    "name": "Aaron West",
+    "team": "Black",
+    "number": "4"
+  },
+  {
+    "name": "Bobby Yefchak",
+    "team": "Black",
+    "number": "1"
+  },
+  {
+    "name": "Cole Sampson",
+    "team": "Black",
+    "number": "0"
+  },
+  {
+    "name": "Hakeem Faud",
+    "team": "Black",
+    "number": "7"
+  },
+  {
+    "name": "James Hare",
+    "team": "Black",
+    "number": "3"
+  },
+  {
+    "name": "Mark Niigolian",
+    "team": "Black",
+    "number": "5"
+  },
+  {
+    "name": "Peter Lindholm",
+    "team": "Black",
+    "number": "2"
+  },
+  {
+    "name": "Tre Grubbs",
+    "team": "Black",
+    "number": "0"
+  },
+  {
+    "name": "Ben Litteken",
+    "team": "Red",
+    "number": "1"
+  },
+  {
+    "name": "Carter Beeman",
+    "team": "Red",
+    "number": "0"
+  },
+  {
+    "name": "Cory Chaplin",
+    "team": "Red",
+    "number": "4"
+  },
+  {
+    "name": "Dan Faris",
+    "team": "Red",
+    "number": "2"
+  },
+  {
+    "name": "Edo Semic",
+    "team": "Red",
+    "number": "7"
+  },
+  {
+    "name": "Kerry Lyons",
+    "team": "Red",
+    "number": "3"
+  },
+  {
+    "name": "Shu Li",
+    "team": "Red",
+    "number": "8"
+  },
+  {
+    "name": "Timmy Ashley",
+    "team": "Red",
+    "number": "5"
+  },
+  {
+    "name": "Brody Snow",
+    "team": "Green",
+    "number": "2"
+  },
+  {
+    "name": "Cody Jarvis",
+    "team": "Green",
+    "number": "8"
+  },
+  {
+    "name": "Cyle Chappy",
+    "team": "Green",
+    "number": "6"
+  },
+  {
+    "name": "Emin Kekic",
+    "team": "Green",
+    "number": "0"
+  },
+  {
+    "name": "Kyle Picard",
+    "team": "Green",
+    "number": "4"
+  },
+  {
+    "name": "Matthew Spear",
+    "team": "Green",
+    "number": "1"
+  },
+  {
+    "name": "Prince Yodishembo",
+    "team": "Green",
+    "number": "7"
+  },
+  {
+    "name": "Tavian Barrino",
+    "team": "Green",
+    "number": "5"
+  },
+  {
+    "name": "Aid Semic",
+    "team": "Light Blue",
+    "number": "3"
+  },
+  {
+    "name": "Donnie Dwyer",
+    "team": "Light Blue",
+    "number": "7"
+  },
+  {
+    "name": "Eliezer Perez Jr",
+    "team": "Light Blue",
+    "number": "4"
+  },
+  {
+    "name": "Jason West",
+    "team": "Light Blue",
+    "number": "6"
+  },
+  {
+    "name": "Jeromy Anderson",
+    "team": "Light Blue",
+    "number": "0"
+  },
+  {
+    "name": "Jibril Abdullahi",
+    "team": "Light Blue",
+    "number": "5"
+  },
+  {
+    "name": "Matt Riordan",
+    "team": "Light Blue",
+    "number": "1"
+  },
+  {
+    "name": "Troy Mcilwain",
+    "team": "Light Blue",
+    "number": "2"
+  }
+]
