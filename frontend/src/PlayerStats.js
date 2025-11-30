@@ -3,68 +3,21 @@ import boxscores from "./boxscores.json";
 import roster from "./players.json";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-// 💡 UPDATED: Added 'points' (for total points) and 'fgpct' (for overall FG%)
+// Helper function definitions
 const statOptions = [
   "ppg",
   "apg",
   "rpg",
   "ftpct",
   "fg3pct",
-  "points", // New: Total Points
-  "fgpct",  // New: Overall Field Goal Percentage
+  "points",  // Total Points
+  "fgpct",   // Overall Field Goal Percentage
 ];
 
 function calculatePercent(made, attempt) {
   if (attempt === 0) return "0%";
   return ((made / attempt) * 100).toFixed(0) + "%";
 }
-
-function calculateTotals(players) {
-  const totals = {
-    points: 0,
-    rebounds: 0,
-    assists: 0,
-    fgm: 0,
-    fga: 0,
-    fg2m: 0,
-    fg2a: 0,
-    fg3m: 0,
-    fg3a: 0,
-    ftm: 0,
-    fta: 0,
-    gamesPlayed: 0,
-  };
-
-  players.forEach((p) => {
-    totals.points += p.points;
-    totals.rebounds += p.rebounds;
-    totals.assists += p.assists;
-    totals.fgm += p.fgm;
-    totals.fga += p.fga;
-    totals.fg2m += p.fg2m;
-    totals.fg2a += p.fg2a;
-    totals.fg3m += p.fg3m;
-    totals.fg3a += p.fg3a;
-    totals.ftm += p.ftm;
-    totals.fta += p.fta;
-    totals.gamesPlayed += p.gamesPlayed || 1;
-  });
-
-  const games = totals.gamesPlayed;
-  totals.fgpct = calculatePercent(totals.fgm, totals.fga);
-  totals.fg2pct = calculatePercent(totals.fg2m, totals.fg2a);
-  totals.fg3pct = calculatePercent(totals.fg3m, totals.fg3a);
-  totals.ftpct = calculatePercent(totals.ftm, totals.fta);
-
-  totals.ppg = games > 0 ? (totals.points / games).toFixed(1) : 0;
-  totals.rpg = games > 0 ? (totals.rebounds / games).toFixed(1) : 0;
-  totals.apg = games > 0 ? (totals.assists / games).toFixed(1) : 0;
-
-  return totals;
-}
-
-const allTeams = Array.from(new Set(roster.map(p => p.team)));
-const playerRosterMap = new Map(roster.map(player => [player.name, player]));
 
 function didPlayerPlay(playerStats) {
     return (
@@ -79,8 +32,12 @@ function didPlayerPlay(playerStats) {
     );
 }
 
+const allTeams = Array.from(new Set(roster.map(p => p.team)));
+const playerRosterMap = new Map(roster.map(player => [player.name, player]));
 
-function App() {
+
+// 🏀 Main Component 
+function PlayerStats() {
   const [selectedGame, setSelectedGame] = useState("all");
   const [selectedTeam, setSelectedTeam] = useState("all");
   const [statFilter, setStatFilter] = useState("ppg");
@@ -214,15 +171,11 @@ function App() {
     return filteredPlayers;
   }, [selectedGame, selectedTeam, searchQuery]);
 
-  // Sorting logic handles both numbers (points) and percentages correctly
+  // Sorting logic (handles Per-Game, Total, and Percentage stats correctly)
   const sortedPlayers = useMemo(() => {
     return [...players].sort((a, b) => {
-      // Logic handles parsing both float strings (like '0.0') and percentage strings (like '50%')
       const valA = String(a[statFilter]).replace('%', '');
       const valB = String(b[statFilter]).replace('%', '');
-      
-      // Since both 'points' (number) and 'fgpct' (string with %) are available 
-      // in the player object, this existing sorting logic works perfectly.
       return parseFloat(valB) - parseFloat(valA);
     });
   }, [players, statFilter]);
@@ -231,7 +184,6 @@ function App() {
 
   return (
     <div className="container mt-4">
-      {/* Logo and Title container */}
       <div className="d-flex align-items-center mb-4">
         <img
           src="/revolutionLogo.jpg"
@@ -239,10 +191,10 @@ function App() {
           style={{ height: '60px', marginRight: '15px' }}
           className="rounded"
         />
-        <h1 className="mb-0">Player Stats</h1>
+        <h1 className="mb-0">Basketball Stats</h1>
       </div>
 
-      {/* FILTER CONTROLS: Use Bootstrap grid for mobile stacking */}
+      {/* FILTER CONTROLS: Mobile responsive grid */}
       <div className="row mb-3 g-2"> 
         {/* Search Bar */}
         <div className="col-12 col-md-3">
@@ -262,7 +214,6 @@ function App() {
               value={selectedGame}
               onChange={(e) => {
                 setSelectedGame(e.target.value);
-                // The filter list is larger now, but we keep the logic to reset if needed
                 if (!statOptions.includes(statFilter)) {
                     setStatFilter('ppg');
                 }
@@ -302,15 +253,14 @@ function App() {
             >
               {displayStatOptions.map((stat) => (
                 <option key={stat} value={stat}>
-                  {/* Updated display logic */}
                   {stat.toUpperCase()
                       .replace('PPG', 'Points Per Game')
                       .replace('APG', 'Assists Per Game')
                       .replace('RPG', 'Rebounds Per Game')
                       .replace('FTPCT', 'Free Throw %')
                       .replace('FG3PCT', '3-Point %')
-                      .replace('POINTS', 'Total Points') // New label
-                      .replace('FGPCT', 'Field Goal %') // New label
+                      .replace('POINTS', 'Total Points')
+                      .replace('FGPCT', 'Field Goal %')
                   }
                 </option>
               ))}
@@ -381,4 +331,4 @@ function App() {
   );
 }
 
-export default App;
+export default PlayerStats;
