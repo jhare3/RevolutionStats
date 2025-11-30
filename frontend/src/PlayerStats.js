@@ -191,7 +191,7 @@ function PlayerStats() {
           style={{ height: '60px', marginRight: '15px' }}
           className="rounded"
         />
-        <h1 className="mb-0">Basketball Stats</h1>
+        <h1 className="mb-0">Player Stats</h1>
       </div>
 
       {/* FILTER CONTROLS: Mobile responsive grid */}

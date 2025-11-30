@@ -2,406 +2,730 @@
   {
     "name": "Brando Pratico",
     "team": "Gray",
-    "number": "5"
+    "number": "5",
+    "position": "Guard",
+    "height": "6' 2\"",
+    "yearsInLeague": 3,
+    "bio": "A reliable scoring guard known for his mid-range game and leadership in the backcourt."
   },
   {
     "name": "Deng Adiang",
     "team": "Gray",
-    "number": "4"
+    "number": "4",
+    "position": "Forward",
+    "height": "6' 7\"",
+    "yearsInLeague": 5,
+    "bio": "A strong, versatile forward who excels in transition and grabbing offensive rebounds."
   },
   {
     "name": "Dylan Pratico",
     "team": "Gray",
-    "number": "3"
+    "number": "3",
+    "position": "Point Guard",
+    "height": "5' 10\"",
+    "yearsInLeague": 2,
+    "bio": "Quick and elusive point guard, specializes in ball handling and distributing the ball."
   },
   {
     "name": "Jake Dion",
     "team": "Gray",
-    "number": "2"
+    "number": "2",
+    "position": "Shooting Guard",
+    "height": "6' 4\"",
+    "yearsInLeague": 4,
+    "bio": "Known for his sharpshooting from beyond the arc. A primary threat in catch-and-shoot situations."
   },
   {
     "name": "John Helsel",
     "team": "Gray",
-    "number": "0"
+    "number": "0",
+    "position": "Center",
+    "height": "6' 10\"",
+    "yearsInLeague": 7,
+    "bio": "The team's anchor in the paint, providing rim protection and reliable low-post scoring."
   },
   {
     "name": "Lester Abayan",
     "team": "Gray",
-    "number": "6"
+    "number": "6",
+    "position": "Guard",
+    "height": "6' 0\"",
+    "yearsInLeague": 1,
+    "bio": "Rookie guard with high energy, often seen applying full-court pressure on defense."
   },
   {
     "name": "Mahlik Franklin",
     "team": "Gray",
-    "number": "1"
+    "number": "1",
+    "position": "Forward",
+    "height": "6' 5\"",
+    "yearsInLeague": 3,
+    "bio": "A hustle player who attacks the basket and converts second-chance opportunities."
   },
   {
     "name": "Paul Gutierrez",
     "team": "Gray",
-    "number": "8"
+    "number": "8",
+    "position": "Forward",
+    "height": "6' 8\"",
+    "yearsInLeague": 6,
+    "bio": "Veteran forward known for his fundamental play, strong rebounding, and mid-range jumper."
   },
   {
     "name": "Sub Jordan",
     "team": "Gray",
-    "number": "00"
+    "number": "00",
+    "position": "Guard",
+    "height": "6' 3\"",
+    "yearsInLeague": 2,
+    "bio": "A solid rotational guard who provides consistent scoring off the bench."
   },
   {
     "name": "Sub Tacey",
     "team": "Gray",
-    "number": "55"
+    "number": "55",
+    "position": "Forward",
+    "height": "6' 6\"",
+    "yearsInLeague": 4,
+    "bio": "A capable substitute forward who brings size and versatility to the frontcourt."
   },
   {
     "name": "Austin Mayo",
     "team": "Yellow",
-    "number": "6"
+    "number": "6",
+    "position": "Guard",
+    "height": "6' 1\"",
+    "yearsInLeague": 3,
+    "bio": "Quick point guard who controls the pace of the game and has an excellent turnover rate."
   },
   {
     "name": "Brandon Bigelow",
     "team": "Yellow",
-    "number": "1"
+    "number": "1",
+    "position": "Shooting Guard",
+    "height": "6' 5\"",
+    "yearsInLeague": 5,
+    "bio": "A natural scorer known for his high-volume shooting and ability to get hot fast."
   },
   {
     "name": "Jack Lloyd",
     "team": "Yellow",
-    "number": "8"
+    "number": "8",
+    "position": "Forward",
+    "height": "6' 7\"",
+    "yearsInLeague": 2,
+    "bio": "A defensive-minded forward who focuses on shutting down opponents' best perimeter players."
   },
   {
     "name": "Kassian Prior",
     "team": "Yellow",
-    "number": "4"
+    "number": "4",
+    "position": "Center",
+    "height": "6' 9\"",
+    "yearsInLeague": 6,
+    "bio": "A traditional center with great touch around the rim and strong positioning for rebounds."
   },
   {
     "name": "Kyle Haley",
     "team": "Yellow",
-    "number": "5"
+    "number": "5",
+    "position": "Guard",
+    "height": "6' 3\"",
+    "yearsInLeague": 4,
+    "bio": "A versatile combo guard who can run the offense or score off the ball."
   },
   {
     "name": "Manny Robertson",
     "team": "Yellow",
-    "number": "0"
+    "number": "0",
+    "position": "Point Guard",
+    "height": "5' 11\"",
+    "yearsInLeague": 3,
+    "bio": "A floor general with excellent court vision, always looking for the extra pass."
   },
   {
     "name": "Miles Robertson",
     "team": "Yellow",
-    "number": "2"
+    "number": "2",
+    "position": "Forward",
+    "height": "6' 6\"",
+    "yearsInLeague": 5,
+    "bio": "Reliable mid-range shooter and capable post-up player, providing scoring depth."
   },
   {
     "name": "Reg Dailey",
     "team": "Yellow",
-    "number": "3"
+    "number": "3",
+    "position": "Forward",
+    "height": "6' 8\"",
+    "yearsInLeague": 7,
+    "bio": "Veteran leader known for his tough defense and high basketball IQ."
   },
   {
     "name": "Alex Philo",
     "team": "Orange",
-    "number": "1"
+    "number": "1",
+    "position": "Guard",
+    "height": "6' 0\"",
+    "yearsInLeague": 2,
+    "bio": "Quick in transition, Alex is a driving force for the Orange team's fast break."
   },
   {
     "name": "Bela Dobkowski",
     "team": "Orange",
-    "number": "5"
+    "number": "5",
+    "position": "Forward",
+    "height": "6' 4\"",
+    "yearsInLeague": 3,
+    "bio": "A high-energy small forward who excels in cutting to the basket."
   },
   {
     "name": "Cam Perta",
     "team": "Orange",
-    "number": "9"
+    "number": "9",
+    "position": "Center",
+    "height": "6' 10\"",
+    "yearsInLeague": 5,
+    "bio": "Defensive big man, Cam patrols the paint and is essential for securing defensive boards."
   },
   {
     "name": "Drew Pelkey",
     "team": "Orange",
-    "number": "4"
+    "number": "4",
+    "position": "Guard",
+    "height": "6' 2\"",
+    "yearsInLeague": 1,
+    "bio": "Rookie with potential, known for his ability to hit open perimeter shots."
   },
   {
     "name": "Dylan Mackie",
     "team": "Orange",
-    "number": "0"
+    "number": "0",
+    "position": "Point Guard",
+    "height": "5' 9\"",
+    "yearsInLeague": 6,
+    "bio": "Experienced floor general who runs the offense with precision and patience."
   },
   {
     "name": "Hayden",
     "team": "Orange",
-    "number": "3"
+    "number": "3",
+    "position": "Forward",
+    "height": "6' 5\"",
+    "yearsInLeague": 4,
+    "bio": "A reliable two-way player, Hayden provides steady scoring and rebounding."
   },
   {
     "name": "Logan Letourneau",
     "team": "Orange",
-    "number": "6"
+    "number": "6",
+    "position": "Shooting Guard",
+    "height": "6' 4\"",
+    "yearsInLeague": 3,
+    "bio": "A spot-up shooter who thrives off penetration and quick ball movement."
   },
   {
     "name": "Bryan Rivera",
     "team": "Purple",
-    "number": "7"
+    "number": "7",
+    "position": "Forward",
+    "height": "6' 6\"",
+    "yearsInLeague": 5,
+    "bio": "A versatile forward, Bryan can switch onto smaller guards and post up when needed."
   },
   {
     "name": "Chris Cayole",
     "team": "Purple",
-    "number": "6"
+    "number": "6",
+    "position": "Center",
+    "height": "6' 9\"",
+    "yearsInLeague": 4,
+    "bio": "Strong rebounder and capable finisher near the basket, essential for second-chance points."
   },
   {
     "name": "Fin Mitchell",
     "team": "Purple",
-    "number": "3"
+    "number": "3",
+    "position": "Point Guard",
+    "height": "5' 10\"",
+    "yearsInLeague": 2,
+    "bio": "A pass-first point guard, Fin excels at setting up teammates for easy baskets."
   },
   {
     "name": "Kaleb Swetty",
     "team": "Purple",
-    "number": "4"
+    "number": "4",
+    "position": "Guard",
+    "height": "6' 1\"",
+    "yearsInLeague": 3,
+    "bio": "A tough defender in the backcourt who can also drive effectively to the hoop."
   },
   {
     "name": "Kolby Bradford",
     "team": "Purple",
-    "number": "0"
+    "number": "0",
+    "position": "Shooting Guard",
+    "height": "6' 3\"",
+    "yearsInLeague": 1,
+    "bio": "Young shooting guard with good mechanics and a high motor."
   },
   {
     "name": "Logan Tobin",
     "team": "Purple",
-    "number": "2"
+    "number": "2",
+    "position": "Forward",
+    "height": "6' 7\"",
+    "yearsInLeague": 6,
+    "bio": "A long and athletic wing who specializes in transition offense and steals."
   },
   {
     "name": "Stanley Salley",
     "team": "Purple",
-    "number": "1"
+    "number": "1",
+    "position": "Forward",
+    "height": "6' 8\"",
+    "yearsInLeague": 7,
+    "bio": "The team veteran, Stanley provides leadership and consistent mid-range scoring."
   },
   {
     "name": "Wyatt Jarvis-comi",
     "team": "Purple",
-    "number": "5"
+    "number": "5",
+    "position": "Guard",
+    "height": "6' 2\"",
+    "yearsInLeague": 3,
+    "bio": "A reliable backup guard, Wyatt is a steady hand when the starters need a rest."
   },
   {
     "name": "Andy Bousono",
     "team": "White",
-    "number": "0"
+    "number": "0",
+    "position": "Point Guard",
+    "height": "5' 11\"",
+    "yearsInLeague": 4,
+    "bio": "Quick and crafty, Andy is known for his ability to break down defenses off the dribble."
   },
   {
     "name": "Isaiah Terrill",
     "team": "White",
-    "number": "1"
+    "number": "1",
+    "position": "Shooting Guard",
+    "height": "6' 3\"",
+    "yearsInLeague": 2,
+    "bio": "A pure shooter who demands attention on the perimeter, creating space for teammates."
   },
   {
     "name": "Jack Goga-blanchard",
     "team": "White",
-    "number": "9"
+    "number": "9",
+    "position": "Forward",
+    "height": "6' 6\"",
+    "yearsInLeague": 3,
+    "bio": "A high-motor forward, Jack is tireless in chasing down loose balls and rebounds."
   },
   {
     "name": "Joe Ruggles",
     "team": "White",
-    "number": "4"
+    "number": "4",
+    "position": "Center",
+    "height": "6' 10\"",
+    "yearsInLeague": 5,
+    "bio": "Solid defensive presence and excellent communicator, organizing the team's half-court defense."
   },
   {
     "name": "John O'brien",
     "team": "White",
-    "number": "6"
+    "number": "6",
+    "position": "Forward",
+    "height": "6' 7\"",
+    "yearsInLeague": 6,
+    "bio": "Veteran forward whose strength allows him to guard both power forwards and centers."
   },
   {
     "name": "Kenny Black",
     "team": "White",
-    "number": "1"
+    "number": "1",
+    "position": "Guard",
+    "height": "6' 2\"",
+    "yearsInLeague": 7,
+    "bio": "An experienced guard known for his clutch performance in the fourth quarter."
   },
   {
     "name": "Tanner Freeman",
     "team": "White",
-    "number": "3"
+    "number": "3",
+    "position": "Guard",
+    "height": "6' 0\"",
+    "yearsInLeague": 1,
+    "bio": "A young guard with promising playmaking abilities and a willingness to learn."
   },
   {
     "name": "Tyrone Conley",
     "team": "White",
-    "number": "5"
+    "number": "5",
+    "position": "Forward",
+    "height": "6' 5\"",
+    "yearsInLeague": 4,
+    "bio": "Versatile wing player, capable of attacking the basket and finishing through contact."
   },
   {
     "name": "Avery Barrino",
     "team": "Blue",
-    "number": "4"
+    "number": "4",
+    "position": "Shooting Guard",
+    "height": "6' 4\"",
+    "yearsInLeague": 3,
+    "bio": "A primary scorer for the Blue team, Avery is a threat from all three levels of the court."
   },
   {
     "name": "Dylan Hill-Quintin",
     "team": "Blue",
-    "number": "0"
+    "number": "0",
+    "position": "Point Guard",
+    "height": "6' 1\"",
+    "yearsInLeague": 2,
+    "bio": "Controls the offense with poise, often setting up backdoor cuts and easy scores."
   },
   {
     "name": "Ethan Calle",
     "team": "Blue",
-    "number": "8"
+    "number": "8",
+    "position": "Forward",
+    "height": "6' 7\"",
+    "yearsInLeague": 5,
+    "bio": "A forward with a high basketball IQ, specializing in finding gaps in the defense for open shots."
   },
   {
     "name": "Jerome Stewart",
     "team": "Blue",
-    "number": "5"
+    "number": "5",
+    "position": "Center",
+    "height": "6' 9\"",
+    "yearsInLeague": 6,
+    "bio": "Known for his powerful dunks and ability to command the glass on both ends."
   },
   {
     "name": "Jonathan Billado",
     "team": "Blue",
-    "number": "7"
+    "number": "7",
+    "position": "Guard",
+    "height": "6' 2\"",
+    "yearsInLeague": 4,
+    "bio": "A reliable rotational guard who gives maximum effort on every possession."
   },
   {
     "name": "Jordan Maille",
     "team": "Blue",
-    "number": "0"
+    "number": "0",
+    "position": "Forward",
+    "height": "6' 5\"",
+    "yearsInLeague": 1,
+    "bio": "Rookie forward who is aggressive on the offensive glass and shows promise as a defender."
   },
   {
     "name": "Nate Luong",
     "team": "Blue",
-    "number": "1"
+    "number": "1",
+    "position": "Guard",
+    "height": "6' 0\"",
+    "yearsInLeague": 3,
+    "bio": "A quick guard whose specialty is penetrating the defense and kicking out to open shooters."
   },
   {
     "name": "Tavarius Vance",
     "team": "Blue",
-    "number": "2"
+    "number": "2",
+    "position": "Forward",
+    "height": "6' 8\"",
+    "yearsInLeague": 7,
+    "bio": "The veteran leader of the team, Tavarius uses his experience to outsmart opponents."
   },
   {
     "name": "Aaron West",
     "team": "Black",
-    "number": "4"
+    "number": "4",
+    "position": "Forward",
+    "height": "6' 6\"",
+    "yearsInLeague": 4,
+    "bio": "A tough two-way player, Aaron provides steady defense and is a capable finisher in the paint."
   },
   {
     "name": "Bobby Yefchak",
     "team": "Black",
-    "number": "1"
+    "number": "1",
+    "position": "Guard",
+    "height": "6' 2\"",
+    "yearsInLeague": 3,
+    "bio": "Known for his energetic defense and willingness to dive for loose balls."
   },
   {
     "name": "Cole Sampson",
     "team": "Black",
-    "number": "0"
+    "number": "0",
+    "position": "Point Guard",
+    "height": "5' 11\"",
+    "yearsInLeague": 2,
+    "bio": "The floor general, Cole has excellent vision and manages the team's offense efficiently."
   },
   {
     "name": "Hakeem Faud",
     "team": "Black",
-    "number": "7"
+    "number": "7",
+    "position": "Center",
+    "height": "6' 10\"",
+    "yearsInLeague": 5,
+    "bio": "A powerful center whose strength makes him a difficult matchup under the basket."
   },
   {
     "name": "James Hare",
     "team": "Black",
-    "number": "3"
+    "number": "3",
+    "position": "Guard",
+    "height": "6' 3\"",
+    "yearsInLeague": 6,
+    "bio": "Experienced shooting guard, James can create his own shot and is a threat in isolation."
   },
   {
     "name": "Mark Niigolian",
     "team": "Black",
-    "number": "5"
+    "number": "5",
+    "position": "Forward",
+    "height": "6' 7\"",
+    "yearsInLeague": 7,
+    "bio": "The team's defensive specialist, Mark excels at disrupting passing lanes and forcing turnovers."
   },
   {
     "name": "Peter Lindholm",
     "team": "Black",
-    "number": "2"
+    "number": "2",
+    "position": "Forward",
+    "height": "6' 8\"",
+    "yearsInLeague": 1,
+    "bio": "Rookie forward with great potential, showing flashes of strong perimeter defense."
   },
   {
     "name": "Tre Grubbs",
     "team": "Black",
-    "number": "0"
+    "number": "0",
+    "position": "Guard",
+    "height": "6' 1\"",
+    "yearsInLeague": 4,
+    "bio": "A steady backup guard who rarely makes mistakes and provides reliable minutes."
   },
   {
     "name": "Ben Litteken",
     "team": "Red",
-    "number": "1"
+    "number": "1",
+    "position": "Guard",
+    "height": "6' 3\"",
+    "yearsInLeague": 5,
+    "bio": "A talented combo guard capable of scoring in bunches and running the fast break."
   },
   {
     "name": "Carter Beeman",
     "team": "Red",
-    "number": "0"
+    "number": "0",
+    "position": "Point Guard",
+    "height": "6' 0\"",
+    "yearsInLeague": 2,
+    "bio": "Smart point guard, Carter has a knack for knowing where the defense is weakest."
   },
   {
     "name": "Cory Chaplin",
     "team": "Red",
-    "number": "4"
+    "number": "4",
+    "position": "Forward",
+    "height": "6' 6\"",
+    "yearsInLeague": 3,
+    "bio": "A physical small forward who attacks the paint relentlessly and draws fouls."
   },
   {
     "name": "Dan Faris",
     "team": "Red",
-    "number": "2"
+    "number": "2",
+    "position": "Center",
+    "height": "6' 9\"",
+    "yearsInLeague": 7,
+    "bio": "Veteran center known for his solid rebounding and effective screen-setting."
   },
   {
     "name": "Edo Semic",
     "team": "Red",
-    "number": "7"
+    "number": "7",
+    "position": "Forward",
+    "height": "6' 8\"",
+    "yearsInLeague": 6,
+    "bio": "Long-time forward, Edo is a consistent presence, providing reliable shooting from the baseline."
   },
   {
     "name": "Kerry Lyons",
     "team": "Red",
-    "number": "3"
+    "number": "3",
+    "position": "Guard",
+    "height": "6' 1\"",
+    "yearsInLeague": 4,
+    "bio": "A quick guard whose defense often jumpstarts the Red team's offense."
   },
   {
     "name": "Shu Li",
     "team": "Red",
-    "number": "8"
+    "number": "8",
+    "position": "Guard",
+    "height": "5' 10\"",
+    "yearsInLeague": 1,
+    "bio": "Rookie guard with high upside, Shu is developing a reputation as a knockdown shooter."
   },
   {
     "name": "Timmy Ashley",
     "team": "Red",
-    "number": "5"
+    "number": "5",
+    "position": "Forward",
+    "height": "6' 5\"",
+    "yearsInLeague": 3,
+    "bio": "A solid power forward, Timmy excels at catching and finishing passes in the lane."
   },
   {
     "name": "Brody Snow",
     "team": "Green",
-    "number": "2"
+    "number": "2",
+    "position": "Guard",
+    "height": "6' 2\"",
+    "yearsInLeague": 4,
+    "bio": "A true competitor, Brody brings hustle and aggressive defense to the Green team."
   },
   {
     "name": "Cody Jarvis",
     "team": "Green",
-    "number": "8"
+    "number": "8",
+    "position": "Center",
+    "height": "6' 11\"",
+    "yearsInLeague": 6,
+    "bio": "The tallest player on the roster, Cody is an imposing figure defensively and offensively."
   },
   {
     "name": "Cyle Chappy",
     "team": "Green",
-    "number": "6"
+    "number": "6",
+    "position": "Forward",
+    "height": "6' 7\"",
+    "yearsInLeague": 7,
+    "bio": "Veteran forward whose experience allows him to execute plays perfectly in late-game situations."
   },
   {
     "name": "Emin Kekic",
     "team": "Green",
-    "number": "0"
+    "number": "0",
+    "position": "Point Guard",
+    "height": "6' 0\"",
+    "yearsInLeague": 3,
+    "bio": "A smart playmaker, Emin controls the tempo and initiates the majority of the team's offense."
   },
   {
     "name": "Kyle Picard",
     "team": "Green",
-    "number": "4"
+    "number": "4",
+    "position": "Guard",
+    "height": "6' 3\"",
+    "yearsInLeague": 5,
+    "bio": "A reliable scoring threat from the two-guard spot, Kyle can create separation with ease."
   },
   {
     "name": "Matthew Spear",
     "team": "Green",
-    "number": "1"
+    "number": "1",
+    "position": "Forward",
+    "height": "6' 5\"",
+    "yearsInLeague": 2,
+    "bio": "A versatile forward who is equally comfortable playing inside or stretching the floor."
   },
   {
     "name": "Prince Yodishembo",
     "team": "Green",
-    "number": "7"
+    "number": "7",
+    "position": "Guard",
+    "height": "6' 1\"",
+    "yearsInLeague": 1,
+    "bio": "Rookie guard known for his raw athleticism and explosive drives to the basket."
   },
   {
     "name": "Tavian Barrino",
     "team": "Green",
-    "number": "5"
+    "number": "5",
+    "position": "Forward",
+    "height": "6' 6\"",
+    "yearsInLeague": 3,
+    "bio": "Tavian is a strong, physical forward who specializes in post defense and low-block scoring."
   },
   {
     "name": "Aid Semic",
     "team": "Light Blue",
-    "number": "3"
+    "number": "3",
+    "position": "Guard",
+    "height": "6' 2\"",
+    "yearsInLeague": 4,
+    "bio": "A rotational guard who provides solid shooting and consistent defensive effort."
   },
   {
     "name": "Donnie Dwyer",
     "team": "Light Blue",
-    "number": "7"
+    "number": "7",
+    "position": "Center",
+    "height": "6' 9\"",
+    "yearsInLeague": 6,
+    "bio": "The team's defensive anchor, Donnie is a vocal leader who demands perfection on defense."
   },
   {
     "name": "Eliezer Perez Jr",
     "team": "Light Blue",
-    "number": "4"
+    "number": "4",
+    "position": "Guard",
+    "height": "6' 0\"",
+    "yearsInLeague": 2,
+    "bio": "Quick point guard who pushes the pace and keeps the opposition scrambling."
   },
   {
     "name": "Jason West",
     "team": "Light Blue",
-    "number": "6"
+    "number": "6",
+    "position": "Forward",
+    "height": "6' 7\"",
+    "yearsInLeague": 5,
+    "bio": "A strong forward whose primary role is rebounding and punishing smaller lineups."
   },
   {
     "name": "Jeromy Anderson",
     "team": "Light Blue",
-    "number": "0"
+    "number": "0",
+    "position": "Point Guard",
+    "height": "5' 11\"",
+    "yearsInLeague": 3,
+    "bio": "A dependable point guard who minimizes turnovers and maximizes possessions."
   },
   {
     "name": "Jibril Abdullahi",
     "team": "Light Blue",
-    "number": "5"
+    "number": "5",
+    "position": "Forward",
+    "height": "6' 5\"",
+    "yearsInLeague": 1,
+    "bio": "Rookie small forward known for his leaping ability and athleticism."
   },
   {
     "name": "Matt Riordan",
     "team": "Light Blue",
-    "number": "1"
+    "number": "1",
+    "position": "Shooting Guard",
+    "height": "6' 4\"",
+    "yearsInLeague": 7,
+    "bio": "The team's senior shooter, Matt is a threat from distance and requires tight coverage."
   },
   {
     "name": "Troy Mcilwain",
     "team": "Light Blue",
-    "number": "2"
+    "number": "2",
+    "position": "Forward",
+    "height": "6' 8\"",
+    "yearsInLeague": 4,
+    "bio": "A versatile forward who provides strong interior defense and transition scoring."
   }
 ]
