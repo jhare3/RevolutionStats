@@ -185,12 +185,6 @@ function PlayerStats() {
   return (
     <div className="container mt-4">
       <div className="d-flex align-items-center mb-4">
-        <img
-          src="/revolutionLogo.jpg"
-          alt="Revolution Basketball League Logo"
-          style={{ height: '60px', marginRight: '15px' }}
-          className="rounded"
-        />
         <h1 className="mb-0">Player Stats</h1>
       </div>
 

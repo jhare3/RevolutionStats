@@ -6,6 +6,7 @@ import PlayerStats from './PlayerStats';
 import TeamStats from './TeamStats';
 import PlayerDirectory from './PlayerDirectory'; // ⬅️ NEW IMPORT: List View
 import PlayerProfileDetail from './PlayerProfileDetail'; // ⬅️ NEW IMPORT: Detail View
+import Recaps from './Recaps.jsx'; // ⬅️ NEW IMPORT: Blog Component
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // The main App component that sets up the Router
@@ -18,10 +19,13 @@ function App() {
         <Route path="/" element={<PlayerStats />} />
         <Route path="/teams" element={<TeamStats />} />
         
-        {/* ⬅️ NEW ROUTE: List view from Navigation Bar */}
+        {/* Blog Route ⬅️ NEW ROUTE */}
+        <Route path="/recaps" element={<Recaps />} />
+
+        {/* List view from Navigation Bar */}
         <Route path="/profiles" element={<PlayerDirectory />} /> 
         
-        {/* ⬅️ NEW DYNAMIC ROUTE: Detail view when a player is selected */}
+        {/* Detail view when a player is selected */}
         <Route path="/profiles/:playerName" element={<PlayerProfileDetail />} /> 
       </Routes>
     </Router>

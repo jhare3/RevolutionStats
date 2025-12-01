@@ -6,6 +6,12 @@ const Navigation = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
       <div className="container">
+        <img
+          src="/revolutionLogo.jpg"
+          alt="Revolution Basketball League Logo"
+          style={{ height: '60px', marginRight: '15px' }}
+          className="rounded"
+        />
         {/* Logo/Brand always links to the home page (Player Stats) */}
         <Link className="navbar-brand fw-bold" to="/">
           Revolution League Stats
@@ -31,19 +37,20 @@ const Navigation = () => {
               </Link>
             </li>
 
-            {/* Link to Player Profiles Directory ⬅️ NEW LINK */}
+             {/* Link to Team Stats */}
+            <li className="nav-item">
+              <Link className="nav-link" to="/teams">
+                Standings
+              </Link>
+            </li>
+
+            {/* Link to Player Profiles Directory */}
             <li className="nav-item">
               <Link className="nav-link" to="/profiles">
                 Player Profiles
               </Link>
             </li>
             
-            {/* Link to Team Stats */}
-            <li className="nav-item">
-              <Link className="nav-link" to="/teams">
-                Team Stats
-              </Link>
-            </li>
             
           </ul>
         </div>

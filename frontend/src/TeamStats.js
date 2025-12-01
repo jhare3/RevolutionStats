@@ -161,7 +161,10 @@ function TeamStats() {
 
     return (
         <div className="container mt-4">
-            <h1 className="mb-4">Team Standings and Statistics</h1>
+            <div className="d-flex align-items-center mb-4">
+        <h1 className="mb-4">Team Standings and Statistics</h1>
+      </div>
+            
 
             <div className="table-responsive">
                 <table className="table table-striped table-bordered">

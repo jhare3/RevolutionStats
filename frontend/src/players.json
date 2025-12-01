@@ -5,8 +5,8 @@
     "number": "5",
     "position": "Guard",
     "height": "6' 2\"",
-    "yearsInLeague": 3,
-    "bio": "A reliable scoring guard known for his mid-range game and leadership in the backcourt."
+    "yearsInLeague": 1,
+    "bio": ""
   },
   {
     "name": "Deng Adiang",
@@ -481,9 +481,9 @@
     "team": "Black",
     "number": "3",
     "position": "Guard",
-    "height": "6' 3\"",
-    "yearsInLeague": 6,
-    "bio": "Experienced shooting guard, James can create his own shot and is a threat in isolation."
+    "height": "5' 11\"",
+    "yearsInLeague": 1,
+    "bio": "Experienced shooting guard, James can create his own shot, spreads the floors, and is a threat in isolation."
   },
   {
     "name": "Mark Niigolian",
@@ -499,9 +499,9 @@
     "team": "Black",
     "number": "2",
     "position": "Forward",
-    "height": "6' 8\"",
+    "height": "6' 2\"",
     "yearsInLeague": 1,
-    "bio": "Rookie forward with great potential, showing flashes of strong perimeter defense."
+    "bio": "Talented forward, spreads the floor, and provides strong post defense."
   },
   {
     "name": "Tre Grubbs",
@@ -509,7 +509,7 @@
     "number": "0",
     "position": "Guard",
     "height": "6' 1\"",
-    "yearsInLeague": 4,
+    "yearsInLeague": 1,
     "bio": "A steady backup guard who rarely makes mistakes and provides reliable minutes."
   },
   {

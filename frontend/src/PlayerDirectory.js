@@ -17,7 +17,10 @@ function PlayerDirectory() {
 
   return (
     <div className="container my-5">
-      <h2 className="mb-4 text-dark border-bottom pb-2">Player Profiles Directory</h2>
+       <div className="d-flex align-items-center mb-4">
+        <h2 className="mb-4 text-dark border-bottom pb-2">Player Profiles Directory</h2>
+      </div>
+      
       
       {/* Search Input */}
       <div className="mb-4">
