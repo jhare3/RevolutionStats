@@ -105,7 +105,7 @@
     "position": "Shooting Guard",
     "height": "6' 5\"",
     "yearsInLeague": 5,
-    "bio": "A natural scorer known for his high-volume shooting and ability to get hot fast."
+    "bio": "An effective playmaker and scorer, Bigelow played a critical role in the Yellow team's Week 9 upset win over Light Blue, providing 10 points, 3 rebounds, and 5 assists. He offers reliable production off the bench."
   },
   {
     "name": "Jack Lloyd",
@@ -114,7 +114,7 @@
     "position": "Forward",
     "height": "6' 7\"",
     "yearsInLeague": 2,
-    "bio": "A defensive-minded forward who focuses on shutting down opponents' best perimeter players."
+    "bio": "A strong bench contributor for Yellow, posting 12 points, 3 rebounds, and 2 assists during their final regular season upset win over Light Blue."
   },
   {
     "name": "Kassian Prior",
@@ -123,7 +123,7 @@
     "position": "Center",
     "height": "6' 9\"",
     "yearsInLeague": 6,
-    "bio": "A traditional center with great touch around the rim and strong positioning for rebounds."
+    "bio": "A formidable rebounder, Prior was part of Yellow's game-changing bench performance in Week 9, tallying 11 points and 15 rebounds in the upset victory over Light Blue."
   },
   {
     "name": "Kyle Haley",
@@ -141,7 +141,7 @@
     "position": "Point Guard",
     "height": "5' 11\"",
     "yearsInLeague": 3,
-    "bio": "A floor general with excellent court vision, always looking for the extra pass."
+    "bio": "A commanding presence and a 'beast on the boards.' Robertson delivered the Alta Group Player of the Game performance in Week 9, dominating the upset victory over Light Blue with 23 points, 15 rebounds, 3 assists, and 3 blocks. He is a formidable center."
   },
   {
     "name": "Miles Robertson",
@@ -249,7 +249,7 @@
     "position": "Point Guard",
     "height": "5' 10\"",
     "yearsInLeague": 2,
-    "bio": "A pass-first point guard, Fin excels at setting up teammates for easy baskets."
+    "bio": "Contributed to Purple's balanced attack in Week 1 with 13 points and 9 rebounds, making him a reliable offensive option."
   },
   {
     "name": "Kaleb Swetty",
@@ -258,7 +258,7 @@
     "position": "Guard",
     "height": "6' 1\"",
     "yearsInLeague": 3,
-    "bio": "A tough defender in the backcourt who can also drive effectively to the hoop."
+    "bio": "A key piece of the Purple quartet that scored in double figures during the season opener, finishing with 15 points, 4 rebounds, and 2 steals."
   },
   {
     "name": "Kolby Bradford",
@@ -267,7 +267,7 @@
     "position": "Shooting Guard",
     "height": "6' 3\"",
     "yearsInLeague": 1,
-    "bio": "Young shooting guard with good mechanics and a high motor."
+    "bio": "The dependable 'Mr. Consistent' for the Purple squad. He was a key part of the team's balanced offense in their season-opening win, contributing 16 points, 3 rebounds, 4 assists, and 3 steals, emphasizing ball movement and efficiency."
   },
   {
     "name": "Logan Tobin",
@@ -276,7 +276,7 @@
     "position": "Forward",
     "height": "6' 7\"",
     "yearsInLeague": 6,
-    "bio": "A long and athletic wing who specializes in transition offense and steals."
+    "bio": "A leading contributor to Purple's offensive success. Tobin led the team in scoring during their Week 1 victory with 18 points and 9 rebounds."
   },
   {
     "name": "Stanley Salley",
@@ -472,9 +472,9 @@
     "team": "Black",
     "number": "7",
     "position": "Center",
-    "height": "6' 10\"",
+    "height": "6' 2\"",
     "yearsInLeague": 5,
-    "bio": "A powerful center whose strength makes him a difficult matchup under the basket."
+    "bio": "Dynamic guard with deep range and an unstoppable crossover."
   },
   {
     "name": "James Hare",
@@ -591,7 +591,7 @@
     "position": "Guard",
     "height": "6' 2\"",
     "yearsInLeague": 4,
-    "bio": "A true competitor, Brody brings hustle and aggressive defense to the Green team."
+    "bio": "Scored timely buckets for Green in the season opener, contributing 10 points to their effort."
   },
   {
     "name": "Cody Jarvis",
@@ -636,7 +636,7 @@
     "position": "Forward",
     "height": "6' 5\"",
     "yearsInLeague": 2,
-    "bio": "A versatile forward who is equally comfortable playing inside or stretching the floor."
+    "bio": "Known as the 'Swiss Army knife' for his versatile play. Spear led the Green team's strong start in Week 1, getting to the cup at will. His impressive performance included 29 points, 15 rebounds, 3 assists, and 2 steals."
   },
   {
     "name": "Prince Yodishembo",
@@ -654,7 +654,7 @@
     "position": "Forward",
     "height": "6' 6\"",
     "yearsInLeague": 3,
-    "bio": "Tavian is a strong, physical forward who specializes in post defense and low-block scoring."
+    "bio": "Dubbed 'The Smooth Operator' for his finesse on the court, Tavian Barrino is a lights-out shooter. He was instrumental in Green's early lead in the season opener, finishing with 22 points, 7 rebounds, 4 assists, and 2 steals."
   },
   {
     "name": "Aid Semic",
@@ -708,7 +708,7 @@
     "position": "Forward",
     "height": "6' 5\"",
     "yearsInLeague": 1,
-    "bio": "Rookie small forward known for his leaping ability and athleticism."
+    "bio": "A core player for Light Blue, Abdullahi is a consistent scorer. He put up 23 points in the Week 1 loss to Black and stepped up in Week 9 with 28 points, 4 rebounds, 3 assists, and 3 steals."
   },
   {
     "name": "Matt Riordan",
@@ -717,7 +717,7 @@
     "position": "Shooting Guard",
     "height": "6' 4\"",
     "yearsInLeague": 7,
-    "bio": "The team's senior shooter, Matt is a threat from distance and requires tight coverage."
+    "bio": "Riordan is a strong defender and rebounder for Light Blue. His stats include 13 points, 9 rebounds, and 3 blocks in Week 1, and an improved 17 points, 9 rebounds, 3 blocks, and 2 steals in Week 9."
   },
   {
     "name": "Troy Mcilwain",

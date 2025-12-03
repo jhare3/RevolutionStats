@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// Removed: import 'bootstrap/dist/css/bootstrap.min.css';
+// Rationale: This import fails in this environment. It is assumed Bootstrap CSS is loaded globally
+// (e.g., via a <link> tag in the main application component or index.html).
 
 const Navigation = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
       <div className="container">
+        {/* Note: The image path '/revolutionLogo.jpg' is user-specific and is included as requested. */}
         <img
           src="/revolutionLogo.jpg"
           alt="Revolution Basketball League Logo"
@@ -41,6 +44,13 @@ const Navigation = () => {
             <li className="nav-item">
               <Link className="nav-link" to="/teams">
                 Standings
+              </Link>
+            </li>
+
+            {/* Link to Recaps - ADDED for Recaps.jsx */}
+            <li className="nav-item">
+              <Link className="nav-link" to="/recaps">
+                Recaps
               </Link>
             </li>
 
