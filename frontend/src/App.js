@@ -17,8 +17,10 @@ function App() {
   return (
     <Router>
       <Navigation />
+      <div style={{ backgroundColor: '#ffffffff' }}>
 
       <div className="container mt-4">
+        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/player-stats" element={<PlayerStats />} />
@@ -28,6 +30,7 @@ function App() {
           <Route path="/profiles/:playerName" element={<PlayerProfileDetail />} />
           <Route path="/boxscores" element={<BoxScores />} />
         </Routes>
+      </div>
       </div>
     </Router>
   );

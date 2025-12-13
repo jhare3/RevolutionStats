@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  /* This applies Montserrat to all text, falling back to a generic sans-serif if it fails to load */
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-family: "Sekuya", system-ui;
+  font-weight: 400;
+  font-style: oblique;
+}
+
+
 .App {
   text-align: center;
 }
