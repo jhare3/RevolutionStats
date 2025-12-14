@@ -5,6 +5,278 @@ import React, { useState, useEffect, useMemo } from 'react';
 // --- STATIC DATA DEFINITION (Complete Data Set) ---
 // =================================================================
 const STATIC_RECAP_DATA = [
+    // Week 8
+    {
+    id: '0',
+    title: 'Week 8 - All of the questions got answered in the final week of the Revolution 2025 Men\'s Fall Basketball League.',
+    author: 'League Admin',
+    category: 'Intro',
+    content: 'All of the questions got answered in the final week of the Revolution 2025 Men\'s Fall Basketball League, and there were some surprises sprinkled in. Black went undefeated, but just by a hair. White thumped their opponents, generating momentum for themselves, and Yellow upset Light Blue in the final game of the season. Let\'s get into how all that went down with the final recap of the regular season:',
+    date: new Date('2025-11-17T00:00:00Z')
+},
+{
+    id: '1',
+    title: 'Week 8 - Game 1: Gray vs. Orange',
+    author: 'League Admin',
+    category: 'Recap',
+    gameDate: '2025-11-15',
+    content: 'The first game started with a bang. Orange came out on the edge early as they found their three-point stroke. Cam Perta led the way from range with several deep three-pointers, while Logan Letourneau and Drew Pelkey also found the bottom of the net. At halftime, the score was 45-36 Orange. But the tides turned in the second. Mahlik "Skywalker" Franklin lived up to his name and took advantage of mismatches and soared to the hoop for several buckets, one of which was a rim-snapping slam. Teammate John Helsel came up in the clutch, while Franklin was unstoppable for the remainder of the half. Their joint effort led to an 81-71 win for Gray.',
+    topPerformers1: 'Gray Top Performers: Mahlik Franklin - 54 points, 12 rebounds, 3 steals, John Helsel - 16 points, 14 rebounds, 2 assists. Alta Group Player of the Game - Mahlik Franklin',
+    topPerformers2: 'Orange Top Performers: Drew Pelkey - 20 points, 9 rebounds, Logan Letourneau - 22 points, 3 rebounds, 8 assists, 2 steals, Cam Perta - 18 points, 4 rebounds, 3 steals',
+    date: new Date('2025-11-17T00:00:00Z')
+},
+{
+    id: '2',
+    title: 'Week 8 - Game 2: Blue vs. Red',
+    author: 'League Admin',
+    category: 'Recap',
+    gameDate: '2025-11-15',
+    content: 'Game two was also a tide-turner. Blue held the upper hand in the first frame behind the play of "Tenacious" Tavarius Vance and "Air" Jordan Maille. Vance and Maille had their shots going, and teammates Nate "The Great" Luong and Avery Barrino also contributed with strong scoring efforts. At halftime, the score was 41-40, Blue. The second half saw a seismic shift in momentum. Ben \'Lights IT UP" Litteken caught fire and got things going for Red. Litteken lived up to the hype from downtown and in the mid-range, while Carter "Bruiser" Beeman got busy on the glass and in the paint. Rounding out the energy shift was none other than Cory "Energize Bunny" Chaplin. He was electric in the open floor and found teammates for easy buckets. Edo Semic also had a strong game with 16 of his own. The final was 78-71, Red.',
+    topPerformers1: 'Blue Top Performers: Tavarus Vance - 23 points, 8 rebounds, Jordan Maille - 18 points, 18 rebounds, 3 assists, 3 steals, Nate Luong - 14 points, 3 rebounds, 2 assists, Avery Barrino - 10 points, 8 rebounds, 4 assists',
+    topPerformers2: 'Red Top Performers: Ben Litteken - 27 points, 10 rebounds, 6 assists, Carter Beeman - 17 points, 15 rebounds, Cory Chalpin - 15 points, 5 rebounds, 4 assists, Edo Semic - 16 points, 1 rebound, 1 assist. Alta Group Player of the Game - Ben Litteken',
+    date: new Date('2025-11-17T00:00:00Z')
+},
+{
+    id: '3',
+    title: 'Week 8 - Game 3: Green vs. Gray',
+    author: 'League Admin',
+    category: 'Recap',
+    gameDate: '2025-11-15',
+    content: 'The tale of two halves was a theme that played out in game three, too. Gray was up throughout the first frame, thanks again to Mahlik "Skywalker" Franklin. Franklin has his shot going at times to complement his ability to get to the cup. Teammates Dylan "point God" Pratico and John Helsel also helped out in the scoring department. At halftime, it was 40-31, Gray. The second half belonged to Green. Tavian Barrino led the charge, and Kyle Picard was right behind him. The duo combined for a whopping 50 of their team\'s 63 points. Barrino hit a barrage of shots in a row, and Picard was dominant down low. Their combined efforts led to a 63-62 comeback victory.',
+    topPerformers1: 'Green Top Performers: Tavian Barrino - 30 points, 10 rebounds, 3 assists, Kyle Picard - 20 points, 8 rebounds. Alta Group Player of the Game - Tavian Barrino',
+    topPerformers2: 'Gray Top Performers: Mahlik Franklin - 28 points, 10 rebounds, 3 assists, 4 steals, Dylan Pratico - 13 points, 4 rebounds, 3 assists, 3 steals, John Helsel - 17 points, 8 rebounds',
+    date: new Date('2025-11-17T00:00:00Z')
+},
+{
+    id: '4',
+    title: 'Week 8 - Game 4: Red vs. Orange',
+    author: 'League Admin',
+    category: 'Recap',
+    gameDate: '2025-11-15',
+    content: 'Game four was another showdown. Both teams exchanged blows throughout the half. After all, basketball is a game of runs. Back and forth they went, basket for basket. Leading the way for Red were Littken, Beeman, Chaplin, Semic, and Dan Faris for Orange, Letourneau, Pelkey, and Dan Mackie. Halftime; 48-48. Despite the constant jockeying for position, Red took the reins in the second. Orange had no matchup or answer for Litteken, who scored from all three levels throughout the game. Beeman was a beast in the paint and on the glass again, while Faris, Chalin, and Semic played well within their roles. The total team effort resulted in a 89-79 win for Red.',
+    topPerformers1: 'Red Top Performers: Ben Litteken - 30 points, 17 rebounds, 5 assists, 2 steals, Carter Beeman - 18 points, 13 rebounds, 4 assists, Cory Chaplin - 14 points, 3 rebounds, 7 assists, Dan Faris - 14 points, 6 rebounds, 2 steals, Edo Semic - 13 points, 4 assists. The Alta Group Player of the Game - Ben Litteken',
+    topPerformers2: 'Orange Top Performers: Drew Pelkey - 28 points, 4 rebounds, 2 assists, Logan Letourneau - 18 points, 5 rebounds, 5 assists',
+    date: new Date('2025-11-17T00:00:00Z')
+},
+{
+    id: '5',
+    title: 'Week 8 - Game 5: Blue vs. Black',
+    author: 'League Admin',
+    category: 'Recap',
+    gameDate: '2025-11-15',
+    content: 'Game five was the first double-digit victory. Black was back in action, Hakeem "The Dream" Faud showcased his smooth pull-up jumpshot, and even showed off some strength, getting to the cup on his defenders. Tre "Grabs Mad Boards" Grubbs nearly went for a triple-double and made it look easy in the process. Peter Linholm also shot lights out in the opportunities he was given. At halftime, it was 51-36, Black. The second half was more of the same. Fortunately, Blue received strong efforts from "Tenacious" Tavarius Vance, "Air" Jordan Maille, Jerome Stewart, and Avery Barrino. Unfortunately, their collective efforts weren\'t enough to close the distance. The final score of this one was 94-72, Black.',
+    topPerformers1: 'Blue Top Performers: Tavarius Vance - 29 points, 11 rebounds, 4 assists, 2 steals, Jordan Maille - 18 points, 5 rebounds, Jerome Stewart - 14 points, 10 rebounds, 3 assists, 2 steals, Avery Barrino - 11 points, 8 rebounds',
+    topPerformers2: 'Black Top Performers: Hakeem Faud - 38 points, 18 rebounds, 6 assists, 2 steals, Tre Grubbs - 22 points, 14 rebounds, 8 assists, Peter Lindholm - 11 points, 4 rebounds. Alta Group Player of the Game - Hakeem Faud',
+    date: new Date('2025-11-18T00:00:00Z')
+},
+{
+    id: '6',
+    title: 'Week 8 - Game 6: White vs. Green',
+    author: 'League Admin',
+    category: 'Recap',
+    gameDate: '2025-11-16',
+    content: 'White showed up with a point to prove. Three players went for more than twenty, and six total players scored in double figures. "The Commish" Andy Bousono captained his way to a triple-double, making all the right plays to put his teammates in positions to succeed, and succeed they did. Isaiah Terrell, Jack Goga-Blanchard, Kenny Black, and Tyrone Conley were beneficiaries of Bousono\'s generous facilitation. At halftime, the score was 53-39, White. A slaughter ensued in the second half, but Green still had a few players stand out. Tavian Barrino, Cyle Chappy, and Brody Snow all scored in double figures, and Barrino was the top scorer with a second straight 30-point performance. However, White played like a well-oiled machine on their way to a 32-point win. The final score was 111-79, White.',
+    topPerformers1: 'White Top Performers: Andy Bousono - 25 points, 11 rebounds, 10 assists, Isaiah Terrell - 21 points, 10 rebounds, Jack Goga-Blanchard - 13 points, 5 rebounds, Kenny Black - 17 points, 6 rebounds, 2 assists, Tyrone Conley - 20 points, 6 rebounds, 3 assists, Tanner Freeman - 13 points, 8 assists, 2 steals. The Alta Group Player of the Game - Andy Bousono',
+    topPerformers2: 'Green Top Performers: Tavian Barrino - 30 points, 4 rebounds, Cyle Chappy - 13 points, 3 rebounds, Brody Snow - 14 points, 8 rebounds, 4 assists',
+    date: new Date('2025-11-18T00:00:00Z')
+},
+{
+    id: '7',
+    title: 'Week 8 - Game 7: Light Blue vs. Purple',
+    author: 'League Admin',
+    category: 'Recap',
+    gameDate: '2025-11-16',
+    content: 'Game seven brought back momentum shifts. Purple received a strong effort from their big three: Chris "The Pro" Cayole, Fin Mitchell, and Kaleb Swetty. Cayole led the way with 21 points on over 50% shooting, while Mitchell and Swetty rounded out the leading scorers. At halftime, it was 39-35, Purple. In the second half, Light Blue started to chip away at the deficit they faced. "Prince" Jibril Abdullahi was a force to be reckoned with. He scored at ease from all three levels; no one could keep him in front of them. Matt "The Stallion" Rioran played with pace, and Aid Semic came up strong with a double-digit outing. The final score of this game was 68-63, Light Blue.',
+    topPerformers1: 'Light Blue Top Performers: Jibril Abdullahi - 35 points, 9 rebounds, 6 assists, 4 steals, Matt Riordan - 16 points, 6 rebounds, Aid Semic - 11 points, 5 rebounds. Alta Group Player of the Game - Jibril Abdullahi',
+    topPerformers2: 'Purple Top Performers: Chris Cayole - 21 points, 9 rebounds, Fin Mitchell 13 points, 8 rebounds, 3 assists, Kaleb Swetty - 13 points, 4 rebounds',
+    date: new Date('2025-11-18T00:00:00Z')
+},
+{
+    id: '8',
+    title: 'Week 8 - Game 8: Yellow vs. Black',
+    author: 'League Admin',
+    category: 'Recap',
+    gameDate: '2025-11-16',
+    content: 'Although it was a matinee game, game eight was the best of the day. Captain Kyle Haley hit a whopping ten threes throughout the contest and made his way to the basket several other times. Jack Lloyd took a page out of Ben Litteken\'s book and shot lights out from the field to help Haley. Meanwhile, Austin Mayo and Kassian Pryor played big roles with double-digit scoring performances. At the half, it was 48-40, Yellow. But in the second half, Black fought back. Tre "Grabs Mad Boards" Grubbs was an unstoppable force on his way to nearly sixty points and twenty rebounds. James Hare and Peter Lindholm were helpful with double-digits, but it was none other than Revolution legend Bobby Yefchak who came up clutch. With time ticking down, Black had clawed their way back to a 96-95 deficit. They held the ball with less than a minute left in the contest. They drew some defense on a dribble drive and kicked it over to Yefchak, who hoisted a smooth, 24-foot, left-handed jumper from the right wing. Nothing but net! Haley came down on the next possession and pulled up from the top of the key. The ball looked good. The arc was phenomenal. But as it descended, it bounced off the back rim and away from the hoop. Black snuck out with a 98-96 win.',
+    topPerformers1: 'Yellow Top Performers: Kyle Haley - 40 points, 7 rebounds, 3 assists, 2 steals, Jack Lloyd - 27 points, 7 rebounds, 2 assists, Austin Mayo - 13 points, 2 rebounds, Kassian Pryor - 11 points, 9 rebounds, 2 assists',
+    topPerformers2: 'Black Top Performers: Tre Grubbs 57 points, 18 rebounds, 5 assists, 3 steals, James Hare - 14 points, 3 rebounds, 2 steals, Peter Lindholm - 16 points. The Alta Group Player of the Game - Tre Grubbs',
+    date: new Date('2025-11-18T00:00:00Z')
+},
+{
+    id: '9',
+    title: 'Week 8 - Game 9: White vs. Purple',
+    author: 'League Admin',
+    category: 'Recap',
+    gameDate: '2025-11-16',
+    content: 'Game nine was over as soon as it started. White\'s whole team continued their collective dominance. Leading the way again was Bousono with a 26-point, 12-assist effort. Conley was an offensive juggernaut and scorched the nets with 30 points, while Black, Terrell, Goga-Blanchard, and O\'Brien scored in double digits. At halftime, the score was 59-32, White. Purple had a few strong outings, too. Bryan "El Toro" Rivera, Chris "The Pro" Cayole, "Mr. Consistent" Kolby Bradford, and Kaleb Swetty did the scoring, with Bradford leading the team with 27. However, it wasn\'t nearly enough to combat the White team\'s scoring clip. Final: 125-91, White',
+    topPerformers1: 'White Top Performers: Andy Bousono - 26 points, 6 rebounds, 12 assists, 2 steals, Isaiah Terrell - 11 points, 7 rebounds, 2 assists, 3 steals, Jack Goga-Blacnachard - 14 points, 7 rebounds, 2 blocks, John O\'Brien - 14 points, 3 rebounds, Kenny Black - 11 points, 9 rebounds, 6 assists, Tyrone Conely - 30 points, 6 rebounds, 2 assists, 3 steals. The Alta Group Player of the Game - Andy Bousono',
+    topPerformers2: 'Purple Top Performers: Chris Cayole - 21 points, 7 rebounds, 2 assists, Bryan Rivera - 13 points, 4 rebounds, 2 assists, Kolby Bradford - 27 points, 2 rebounds, Kaleb Swetty - 10 points, 7 rebounds, 3 assists',
+    date: new Date('2025-11-18T00:00:00Z')
+},
+{
+    id: '10',
+    title: 'Week 8 - Game 10: Light Blue vs. Yellow',
+    author: 'League Admin',
+    category: 'Recap',
+    gameDate: '2025-11-16',
+    content: 'Game ten was the upset of the day. Light Blue didn\'t want it to be, and they held Yellow off for a bit. "Prince" Jirbil Abduallahi and Matt "The Stallion" Riordan were a strong one-two punch, but Yellow\'s team had it going on. At the half, it was 37-35, Yellow. However, they continued to push the team dynamic in the second, and they extended their lead. Leading the way was Manny "Big Bro" Robertson. He went for over 20 and secured 15 rebounds in the process. Jack Lloyd, Kassian Pryor, and Brandon Bigelow came up big in the upset, too. The final score was 71-60, Yellow.',
+    topPerformers1: 'Light Blue Top Performers: Jibril Abdullahi - 28 points, 4 rebounds, 3 assists, 3 steals, Matt Riordan - 17 points, 9 rebounds, 2 assists, 3 blocks, 2 steals',
+    topPerformers2: 'Yellow Top Performers: Manny Robertson - 23 points, 15 rebounds, 3 assists, 3 blocks, Kassian Prior - 11 points, 15 rebounds, Jack Lloyd - 12 points, 3 rebounds, 2 assists, Brandon Bigelow - 10 points, 3 rebounds, 5 assists. The Alta Group Player of the Game - Manny Robertson',
+    date: new Date('2025-11-18T00:00:00Z')
+},
+{
+    id: '11',
+    title: 'Week 8 - Final Standings and Playoff Preview',
+    author: 'League Admin',
+    category: 'Closing',
+    content: 'The Final Regular Season Standings for the Revolution Men\'s Basketball Fall League 2025: BLACK 9-0, LIGHT BLUE 7-2, WHITE 7-2, PURPLE 5-4, GREEN 5-4, RED 3-6, BLUE 3-6, YELLOW 2-7, GRAY 2-7, ORANGE 1-8. Big thank you to our new sponsors, Namaste Kitchens and The Alta Group! Check them out if you haven\'t yet. This recap was brought to you by Warden\'s Wisdom, a mindfulness-based coaching service to help you overcome anxiety and stress with simple, customized mindfulness practices. Warden\'s Wisdom Invitation of the Week: "It\'s okay to examine yourself. An examined life is a life well-lived. But be mindful of the approach. Stay curious. Stay open. And minimize judgments. You are a human after all." Some questions as we enter the playoffs: Will Black run the table undefeated? Will someone finally blemish their record? Who will be the MVP? Find out the answers to these questions this RIGHT NOW and this Sunday, November 23rd, on the Revolution Facebook Page. You won\'t wanna miss it!',
+    date: new Date('2025-11-18T00:00:00Z')
+},
+    // Week 7
+    {
+    id: '0',
+    title: 'Week 7 - Week 7 was full of matches made in heaven.',
+    author: 'League Admin',
+    category: 'Intro',
+    content: 'Week 7 was full of matches made in heaven. White and Light Blue squared off in a battle for number two. Black was on the attack with their dynamite duo, and Purple made their presence felt with seven players in double digits. Let\'s get into the action!',
+    date: new Date('2025-11-11T00:00:00Z')
+},
+{
+    id: '1',
+    title: 'Week 7 - Game 1: Light Blue vs. White',
+    author: 'League Admin',
+    category: 'Recap',
+    gameDate: '2025-11-09',
+    content: 'Game one was hot from the start! White was without their Big Dog, Tyrone Conley, but "The Commish" Andy Bousono bullied his way around the court to make his presence felt. Isaiah Terrell and Jack Goga-Blanchard also played big roles to keep White in contention. However, at the half, Light Blue led by a slim 27-26 margin. In the second half, the fight ensued. Light Blue received stellar showings from "Prince" Jibril Abdullahi and Matt "The Stallion" Riordan. Both players got into the passing lanes over and over to turn defense into offense. Abdullahi also clicked into high gear at just the right times to provide an extra scoring punch. The final score of this game was 63-59, Light Blue.',
+    topPerformers1: 'Light Blue Top Performers: Jibril Abdullahi - 30 points, 8 rebounds, 4 assists, 6 steals, Matt Riordan - 14 points, 7 rebounds, 2 assists, 4 steals. The Alta Group Player of the Game - Jibril Abdullahi',
+    topPerformers2: 'White Top Performers: Andy Bousono - 25 points, 13 rebounds, 8 assists, Isaiah Terrell - 10 points, 5 rebounds, 2 assists, Jack Goga-Blanchard - 11 points, 11 rebounds, 2 steals',
+    date: new Date('2025-11-11T00:00:00Z')
+},
+{
+    id: '2',
+    title: 'Week 7 - Game 2: Green vs. Red',
+    author: 'League Admin',
+    category: 'Recap',
+    gameDate: '2025-11-09',
+    content: 'Game two was all business for Green. Kevin "KG" Garrison was like a machine out there. He skied for rebounds and showcased a textbook, silky smooth jumpshot to help put Green in the lead. Brody Snow was a terrific secondary scoring option, along with Prince Yodishembo, who stuffed the stat sheet. At halftime, it was 33-24, Green. Green grew their lead in the second, but Red had some strong outings, too. Ben "Lights It Up" Litteken wasn\'t his usual self, but he still got buckets when he could. Carter "Bruiser" Beeman did some damage in the paint, and Kerry Lyons must have taken a bath in the hot tub time machine, as he pulled off a gargantuan double-double like he was playing for the Frost Heaves. Unfortunately, it wasn\'t nearly enough, as Green walked away the winners, 78-61.',
+    topPerformers1: 'Green Top Performers: Brody Snow - 18 points, 7 rebounds, 2 assists, Kevin Garrison - 23 points, 10 rebounds, 2 steals, Prince Yodishembo - 20 points, 9 rebounds, 2 assists, 2 steals. The Alta Group Player of the Game - Kevin Garrison',
+    topPerformers2: 'Red Top Performers: Ben Litteken - 15 points, 9 rebounds, 2 assists, Carter Beeman - 19 points, 5 rebounds, 3 assists, Kerry Lyons - 10 points, 25 rebounds',
+    date: new Date('2025-11-11T00:00:00Z')
+},
+{
+    id: '3',
+    title: 'Week 7 - Game 3: Purple vs. Gray',
+    author: 'League Admin',
+    category: 'Recap',
+    gameDate: '2025-11-09',
+    content: 'Purple came out of the gate throwing punches. They had seven players reach double figures: Stan "The Man" Salley, Chris "The Pro" Cayole, Logan Tobin, Kaleb Swetty, Fin Mitchell, and Wyatt Jarvis-Comi. Salley led the way with a 20-piece McNugget, and Cayole shot 85% from three. At halftime, it was 59-36 in favor of Purple. Purple kept pounding, but Gray had a little bit of fight in the second. Their sub, Will, had a powerful performance with 34 points and 19 rebounds, while John Helsel chipped in with 20 points of his own. Paul Gutierrez almost registered a double-double to round out the performances, but it wasn\'t enough for Gray. The final: 102-71, Purple.',
+    topPerformers1: 'Purple Top Performers: Stan Salley - 20 points, 9 rebounds, 2 assists, Chris Cayole - 18 points, 4 rebounds, 2 assists, Kolby Bradford - 15 points, 3 rebounds, Kaleb Swetty - 13 points, 7 rebounds, 7 assists, Fin Mitchell - 10 points, 5 rebounds, 3 assists, Logan Tobin - 10 points, 8 rebounds, 4 assists, Wyatt Jarvis-Comi - 10 points, 2 steals. The Alta Group Player of the Game - Stan "The Man" Salley',
+    topPerformers2: 'Gray Top Performers: John Helsel - 20 points, 6 rebounds, 4 assists, Will - 34 points, 19 rebounds, 3 assists, 3 steals, Paul Gutierrez - 11 points, 8 rebounds, 3 assists',
+    date: new Date('2025-11-11T00:00:00Z')
+},
+{
+    id: '4',
+    title: 'Week 7 - Game 4: Blue vs. Yellow',
+    author: 'League Admin',
+    category: 'Recap',
+    gameDate: '2025-11-09',
+    content: 'Game four was a tight contest. Yellow came to battle. Kyle Haley and Reg Dailey put together some fine play along with their teammates to keep the first half within striking distance. Haley was timely in his three-point conversions, and Dailey made it rain in the midrange. However, at halftime the score favored Blue, 40-36. In the second half, they stretched their lead. Led by "Tenacious" Tavarius Vance, "Air" Jordan Maille, and "Send it in" Jerome Stewart, Blue put the clamps down defensively, and hit big buckets to take control of the game and establish momentum. The final of this one was 74-64, Blue.',
+    topPerformers1: 'Blue Top Performers: Tavarius Vance - 18 points, 10 rebounds, 4 assists, Jordan Maille - 24 points, 10 rebounds, 2 assists, 2 steals, Jerome Stewart - 16 points, 6 rebounds, 4 assists, 2 steals. The Alta Group Player of the Game - Jordan Maille',
+    topPerformers2: 'Yellow Top Performers: Kyle Haley - 16 points and 5 rebounds, Reg Dailey - 10 points and 2 rebounds',
+    date: new Date('2025-11-11T00:00:00Z')
+},
+{
+    id: '5',
+    title: 'Week 7 - Game 5: Black vs. Orange',
+    author: 'League Admin',
+    category: 'Recap',
+    gameDate: '2025-11-09',
+    content: 'This game was over almost as soon as it began. Hakeem "The Dream" Faud was back in full force, and he was up to his usual activities: scoring from all three levels, rebounding like a madman, and wreaking havoc on defense. Teammates Aaaron West and Tre "Grabs Mad Boards" Grubbs provided plenty of scoring insurance to help Black distance themselves from Orange. At halftime, it was 59-36, Black. Black coasted in the second, allowing Orange to put up some points. They had four players reach double figures: Logan Letourneau, Dylan Mackie, Drew Pelkey, and Alex Philo. Mackie was like Ice Cube and almost messed around and got a triple-double. But it wasn\'t nearly enough to overcome the halftime deficit. The final score was 104-76, Black.',
+    topPerformers1: 'Black Top Performers: Hakeem Faud - 43 points, 16 rebounds, 8 assists, 6 steals, Tre Grubbs - 29 points, 13 rebounds, 7 assists, Aaron West - 16 points, 2 rebounds. The Alta Group Player of the Game - Hakeem Faud',
+    topPerformers2: 'Orange Top Performers: Drew Pelkey - 19 points, 6 rebounds, Dylan Mackie - 12 points, 13 rebounds, 8 assists, Logan Letourneau - 22 points, 6 rebounds, 2 assists, Alex Philo - 15 points',
+    date: new Date('2025-11-11T00:00:00Z')
+},
+{
+    id: '6',
+    title: 'Week 7 - Sponsors, Standings, and Preview',
+    author: 'League Admin',
+    category: 'Closing',
+    content: 'League standings after week 7: BLACK 7-0, LIGHT BLUE 6-1, WHITE 5-2, PURPLE 5-2, GREEN 4-3, BLUE 3-4, RED 2-5, ORANGE 1-6, YELLOW 1-6, GRAY 1-6. Big thank you to our new sponsors, Namaste Kitchens and The Alta Group! Check them out if you haven\'t yet. This recap was brought to you by Warden\'s Wisdom, a mindfulness-based coaching service to help you overcome anxiety and stress with simple, customized mindfulness practices. Warden\'s Wisdom Invitation of the Week: "Lean into uncertainty. Be okay with it. After all, it\'s one of the only things that\'s certain in this life." Some questions as we exit week 7 and enter week 8: Will Purple keep punching up in the standings? How will White respond after a second loss? Will Black remain undefeated heading into the playoffs? Find out the answers to these questions this Sunday, starting at 8 am. You won\'t wanna miss it!',
+    date: new Date('2025-11-11T00:00:00Z')
+},
+   
+   // Week 6
+    {
+    id: '0',
+    title: 'Week 6 - Week 6 was full of tricks.',
+    author: 'League Admin',
+    category: 'Intro',
+    content: 'Week 6 was full of tricks. A 48-point and 26-rebound performance in an overtime thriller, a tide turner in the opener, and Orange even got into the win column. Needless to say, Week 6 had it all. Let\'s get into the action.',
+    date: new Date('2025-11-04T00:00:00Z')
+},
+{
+    id: '1',
+    title: 'Week 6 - Game 1: Red vs. Purple',
+    author: 'League Admin',
+    category: 'Recap',
+    gameDate: '2025-11-02',
+    content: 'Red was undermanned without Ben "Lights It Up" Litteken, but that didn\'t stop them from coming out with a bang. Carter "Bruiser" Beeman was a behemoth in the paint and nearly unguardable as he stopped over and through defenders on his way to scoring basket after basket. Cory "The Energizer Bunny" Chaplin packed a punch on the scoring end as well, while Dan Faris also chipped in with double digits. At halftime, it was Red who was ahead, 35-28. But that woke up a sleeping giant. Chris "The Pro" Cayole took the game into his hands along with three teammates: Kaleb Swetty, Logan Tobin, and Stan "The Man" Salley. Sweety dropped sweet passes into the shooting pocket of Cayole, who struck multiple times from deep. Tobin also hit a couple of timely three-pointers, while Salley bucked up in the paint against Beeman. Their collective effort led to a serious shift in energy, and the scoreboard showed. The final score was 83-80, Purple.',
+    topPerformers1: 'Red Top Performers: Carter Beeman - 32 points, 11 rebounds, 2 steals, Cory Chaplin - 20 points, 3 rebounds, 4 assists, Dan Faris - 12 points, 2 steals',
+    topPerformers2: 'Purple Top Performers: Chris Cayole - 33 points, 11 rebounds, 3 assists, 3 steals, Kaleb Swetty - 13 points, 3 rebounds, 6 assists, 3 steals, Logan Tobin - 14 points, 6 rebounds, 3 assists, Stan Salley - 15 points, 14 rebounds, 3 assists, 2 steals. The Alta Group Player of the Game - Chris Cayole',
+    date: new Date('2025-11-04T00:00:00Z')
+},
+{
+    id: '2',
+    title: 'Week 6 - Game 2: Yellow vs. Orange',
+    author: 'League Admin',
+    category: 'Recap',
+    gameDate: '2025-11-02',
+    content: 'Game two was a barn burner in the first frame. Yellow was led by Captain Kyle Haley and Reg Dailey. Haley and Dailey doubled down from distance and from the midrange to drop 24 and 28, respectively. Manny "Big Bro" Robertson was a reassuring scorer, too, to keep Yellow within striking distance. At halftime, the score was in favor of Orange, 49-45. In the second, Orange opened it up. Drew Pelkey played a near-perfect game on his way to 35 points and 12 boards, and Logan Letourneau was another helpful asset to the offense. But perhaps the most helpful was Dylan Mackie. He was the straw that stirred the offense\'s drink. The final: 92-77, Orange.',
+    topPerformers1: 'Yellow Top Performers: Kyle Haley - 24 points, 5 rebounds, 2 assists, Reg Dailey - 28 points, 7 rebounds, 2 assists, Manny Roberston - 10 points, 2 rebounds, 3 assists',
+    topPerformers2: 'Orange Top Performers: Drew Pelkey - 35 points, 12 rebounds, 3 assists, Logan Letourneau - 22 points, 6 rebounds, 2 assists, Dylan Mackie - 9 points, 5 rebounds, 12 assists. The Alta Group Player of the Game - Drew Pelkey',
+    date: new Date('2025-11-04T00:00:00Z')
+},
+{
+    id: '3',
+    title: 'Week 6 - Game 3: Black vs. Green',
+    author: 'League Admin',
+    category: 'Recap',
+    gameDate: '2025-11-02',
+    content: 'Game three was one you couldn\'t believe. Black was without Hakeem "The Dream" Faud, so Tre "Grabs Mad Boards" Grubbs not only did that, but he did his fair share of scoring, too. He scorched the nets for a near fifty-point performance throughout the contest, and teammates James Hare and Peter Lindham helped with scoring in double figures as well. At the half, they held a 45-43 lead. But Green was a well-oiled machine. Tavian Barrino set the tone with a perfect shooting percentage from inside the arc, while Cyle Chappy chipped in with some backbreaking three-pointers that kept the audience biting their nails. Brody Snow drank some go-go juice and provided big sparks as needed. As a result, the score at the end of regulation was 81-81. But in overtime, Black took care of business with a few buckets on offense and only allowing one on the defensive end, so they snuck away with a win. 87-83.',
+    topPerformers1: 'Black Top Performers: Tre Grubbs - 48 points, 26 rebounds, 3 assists, 4 steals, James Hare - 17 points, 3 rebounds, 4 assists, Peter Lindham - 15 points, 7 rebounds, 3 assists. The Alta Group Player of the Game - Tre Grubbs',
+    topPerformers2: 'Green Top Performers: Tavian Barrino - 40 points, 9 rebounds, 4 assists, Cyle Chappy - 21 points, 7 rebounds, Brody Snow - 11 points, 5 rebounds, 3 assists',
+    date: new Date('2025-11-04T00:00:00Z')
+},
+{
+    id: '4',
+    title: 'Week 6 - Game 4: Blue vs. Light Blue',
+    author: 'League Admin',
+    category: 'Recap',
+    gameDate: '2025-11-02',
+    content: 'This game was over almost as soon as it started. Light Blue lit the scoreboard up and clamped down on the defensive end. "Prince" Jibril Abdullahi was a force to be reckoned with. He was nearly impossible to guard off the bounce, and his sniper-like precision from three made him all the harder to guard. Teammate Donnie Dwyer continued playing like a man possessed. At halftime, they held a 43-21 lead. In the second half, they continued to stretch that lead. Despite being dismantled from the get-go, Blue had a strong performance from Jerome Stewart, who went for 25 in the loss. The final: 91-45, Light Blue.',
+    topPerformers1: 'Blue Top Performers: Jerome Stewart - 25 points, 7 rebounds',
+    topPerformers2: 'Light Blue Top Performers: Jibril Abdullahi - 38 points, 6 rebounds, 4 assists, Donnie Dwyer - 24 points, 13 rebounds, 2 assists. The Alta Group Player of the Game - Jibril Abdullahi',
+    date: new Date('2025-11-04T00:00:00Z')
+},
+{
+    id: '5',
+    title: 'Week 6 - Game 5: White vs. Gray',
+    author: 'League Admin',
+    category: 'Recap',
+    gameDate: '2025-11-02',
+    content: 'The final game of the day was almost as much of a snoozefest as game four. White\'s well-balanced attack was too much for Gray to contain. "The Commish" Andy Bousono held steady at the point and scored at all three levels. Isaiah Terrell shot it as efficiently as one can get. Jack Goga-Blanchard, "Mean" Joe Ruggles, and Kenny Black also got into the scoring mix to get White out ahead. At halftime, it was 59-26, White. Gray won the second half by double digits, but their hole to dig out of was way too big. Mahlik "Skywalker" Franklin showcased his athletic prowess, while Dylan "Point God" Practico and Dieng Adieng dipped their toes into double-digit scoring waters. But it was too late to surmount a comeback. The final score was 82-64, White.',
+    topPerformers1: 'White Top Performers: Andy Bousono - 19 points, 9 rebounds, 8 assists, Isaiah Terrell - 11 points, 4 rebounds, 2 assists, Jack Goga-Blanchard - 15 points, 5 rebounds, 2 assists, Joe Ruggles - 13 points, 3 rebounds, 3 assists, Kenny Black - 13 points, 4 rebounds. The Alta Group Player of the Game - Andy Bousono',
+    topPerformers2: 'Gray Top Performers: Mahlik Franklin - 30 points, 6 rebounds, 3 steals, Dylan Pratico - 14 points, 2 rebounds, 3 assists, 3 steals, Deng Adieng - 11 points, 6 rebounds',
+    date: new Date('2025-11-04T00:00:00Z')
+},
+{
+    id: '6',
+    title: 'Week 6 - Sponsors, Standings, and Preview',
+    author: 'League Admin',
+    category: 'Closing',
+    content: 'League standings after week 6: BLACK 6-0, WHITE 5-1, LIGHT BLUE 5-1, PURPLE 4-2, GREEN 3-3, RED 2-4, BLUE 2-4, GRAY 1-5, ORANGE 1-5, YELLOW 1-5. Big thank you to our new sponsors, Namaste Kitchens and The Alta Group! Check them out if you haven\'t yet. This recap was brought to you by Warden\'s Wisdom, a mindfulness-based coaching service to help you overcome anxiety and stress with simple, customized mindfulness practices. Warden\'s Wisdom Invitation of the Week: "Pay attention to your attention. You just might notice how much of life has been passing you by." Some questions as we exit week 6 and enter week 7: Will Light Blue beat out White for the two seed? Is Purple the new dark horse? Will Black stay undefeated? Find out the answers to these questions this Sunday, starting at 8 am. You won\'t wanna miss it!',
+    date: new Date('2025-11-04T00:00:00Z')
+},
     {
         // Week 5
         id: '0-5',
@@ -43,7 +315,7 @@ const STATIC_RECAP_DATA = [
         category: 'Recap',
         gameDate: '2025-10-26',
         content: 'This game was over before halftime. "The Commish" and co. had plenty to prove. Bousono led the team with a whopping 32 points, while lacing seven three pointers. Five other teammates got into double figures: Isaiah Terrell, Jack Goga-Blacnahrd, "Mean" Joe Ruggles, Kenny Black, and Tyrone "Big Dog" Conley. Their collective attack led to a halftime lead of 51-26. The second half was more of the same, but Red had two top performers. Ben "Lights It Up" Litteken was hard to guard, and he lived up to his name. Speaking of living up to one\'s name, Cory "The Energizer Bunny" Chaplin was anything but short of energy as he zipped around the court. Unfortunately, Red needed more than a duo to step up to the dominance of White\'s depth. The final score was 115-78, White.',
-        topPerformers1: 'White Top Performers: Andy Bousono - 32 points, 5 rebounds, 4 assists, 5 steals, Isaiah Terrell - 15 points, 7 rebounds, 3 steals, Jack Goga-Blacnhard - 17 points, 13 rebounds, Joe Ruggles - 16 points, 2 rebounds, 3 assists, Tyrone Conley - 18 points, 7 rebounds, 5 assists, 2 steals, Kenny Black - 14 points, 11 rebounds, 2 steals. The Alta Group Player of the Game - Andy Bousono',
+        topPerformers1: 'White Top Performers: Andy Bousono - 32 points, 5 rebounds, 4 assists, 5 steals, Isaiah Terrell - 15 points, 7 rebounds, 3 steals, Jack Goga-Blacnahrd - 17 points, 13 rebounds, Joe Ruggles - 16 points, 2 rebounds, 3 assists, Tyrone Conley - 18 points, 7 rebounds, 5 assists, 2 steals, Kenny Black - 14 points, 11 rebounds, 2 steals. The Alta Group Player of the Game - Andy Bousono',
         topPerformers2: 'Red Top Performers: Ben Litteken - 36 points, 6 rebounds, 3 assists, 2 steals, Cory Chaplin - 17 points, 3 rebounds, 4 assists, 2 steals',
         date: new Date('2025-10-28T00:00:00Z')
     },
@@ -316,7 +588,7 @@ const STATIC_RECAP_DATA = [
         gameDate: '2025-10-04',
         content: 'Game three was another lopsided victory. Ben “Lights It Up” Litteken looked like he was seeking revenge after getting bounced in the first round of the summer league playoffs. He shot at a 62% clip for a league high 54 points. Teammates Cory “Energizer Bunny” Chaplin and Carter “Bruiser” Beeman also played pivotal roles in the scoring effort. At half, the score was 48-31, Red. In the second half, they went on cruise control. For Yellow, Manny “Big Bro” Robertson continued his strong play after rebounding from an injury in the spring. Teammates Austin Mayo, Kassian Pryor, and Reg Dailey also got into double figures. But the deficit was too large to overcome. The final was 97-72, Red.',
         topPerformers1: 'Red Top Performers: Ben Litteken - 54 points, 16 rebounds, 2 assists, 2 steals, Carter Beeman - 10 points, 7 rebounds, Cory Chaplin - 14 points, 5 rebounds, 5 assists, 3 steals',
-        topPerformers2: 'Yellow Top Performers: Manny Robertson - 25 points, 3 rebounds, 2 steals, Reg Dailey - 10 points, 7 rebounds, Austin Mayo - 19 points,Kassian Prior - 12 points, 8 rebounds',
+        topPerformers2: 'Yellow Top Performers: Manny Robertson - 25 points, 3 rebounds, 2 steals, Reg Dailey - 10 points, 7 rebounds, Austin Mayo - 19 points,Kassian Pryor - 12 points, 8 rebounds',
         date: new Date('2025-10-06T00:00:00Z'),
     },
 ];
@@ -394,7 +666,7 @@ const RecapCard = ({ post }) => {
                   <i className={`bi bi-${icon} me-2 text-danger`}></i> {title}
               </h6>
               {/* Content Body (e.g., "Jibril Abdullahi - 20 points...") */}
-              <div className="text-secondary whitespace-pre-wrap small lh-base">{detailContent}</div>
+              <div className="text-light-emphasis whitespace-pre-wrap small lh-base">{detailContent}</div>
           </div>
       );
   };
@@ -432,6 +704,7 @@ const RecapCard = ({ post }) => {
     left: 0,
     right: 0,
     height: '60px',
+    // Must be black text on black background
     background: 'linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0))',
     pointerEvents: 'none',
     zIndex: 1,
@@ -440,7 +713,8 @@ const RecapCard = ({ post }) => {
   return (
     // col-12 ensures full width on all screen sizes, including desktop
     <div className="col-12 mb-4">
-      <div className="card h-100 shadow-lg border-0 rounded-4">
+      {/* 1. Card Container: Added border border-secondary for a black/dark outline */}
+      <div className="card h-100 shadow-lg border border-secondary rounded-4">
         <div className="card-body d-flex flex-column h-100 p-4 p-sm-5">
           
           {/* Header & Meta */}
@@ -476,8 +750,8 @@ const RecapCard = ({ post }) => {
           <div className="flex-grow-1 position-relative mb-3">
             <div 
               style={(!isExpanded && needsExpansion) ? collapsedStyle : {}} 
-              // Custom look: thick danger border on left, light background
-              className="p-3 border border-start-0 border-end-0 border-top-0 border-bottom-0 border-5 border-danger-subtle rounded-end bg-danger-subtle bg-opacity-10">
+              // 2. Content Block: White background and secondary (dark) border
+              className="p-3 border border-secondary rounded-3 bg-white"> 
               {mainContentBlock}
             </div>
             
@@ -554,8 +828,9 @@ const Recaps = () => {
         // Main container centered on the page with shadow
         <div className="container py-4">
             <div className="card bg-white p-4 p-md-5 rounded-4 shadow-lg border-0">
-                {/* Header: Reduced spacing */}
-                <header className="text-center pb-3 pb-md-4 border-bottom border-danger mb-4">
+                {/* Header: Reduced from mb-5/pb-5 to mb-4/pb-4 for tighter spacing */}
+                <header className="text-center pb-3 pb-md-4 border-bottom border-danger-subtle mb-4">
+                    {/* Ensure text is visible against potential black background */}
                     <h1 className="display-4 fw-bold text-dark mb-2">
                         League <span className="text-danger">Recaps</span> 
                     </h1>
@@ -564,7 +839,7 @@ const Recaps = () => {
                     </p>
                 </header>
                 
-                {/* Week Selector Navigation: Reduced spacing */}
+                {/* Week Selector Navigation: Reduced outer div margin from mb-5 to mb-4 */}
                 {uniqueWeeks.length > 0 && (
                     <div className="mb-4">
                         <h3 className="text-center text-dark-emphasis mb-4 fs-5 fw-bold">Filter By Week:</h3>
@@ -589,8 +864,8 @@ const Recaps = () => {
                 <main className="py-4">
                     {activeWeek && filteredPosts.length > 0 && (
                         <>
-                        {/* Recaps Title: Reduced spacing */}
-                        <h2 className="text-center text-dark mb-4 fs-3 fw-bolder pb-3">
+                        {/* Recaps Title: Reduced margin from mb-5 to mb-4 */}
+                        <h2 className="text-center text-dark mb-4 fs-3 fw-bolder border-bottom border-danger pb-3">
                             Week {activeWeek} Recaps
                         </h2>
                         {/* Bootstrap Grid: All cards are now full-width (col-12 is handled inside RecapCard) */}
@@ -633,7 +908,7 @@ const Recaps = () => {
 function App() {
   return (
     // Set a subtle background and a max-width container for desktop display
-    <div className="min-vh-100 bg-light" style={{ fontFamily: 'Inter, sans-serif' }}>
+    <div className="min-vh-100 bg-dark rounded-4" style={{ fontFamily: 'Inter, sans-serif' }}>
         <div className="container-xxl p-2 p-sm-5 mx-auto"> 
             <Recaps />
         </div>
