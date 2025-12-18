@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
+
 const Navigation = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
@@ -58,7 +62,7 @@ const Navigation = () => {
               </Link>
             </li>
             */}
-            
+
             <li className="nav-item">
               <Link className="nav-link" to="/boxscores">
                 Box Scores
