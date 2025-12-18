@@ -49,11 +49,16 @@ const Navigation = () => {
                 Recaps
               </Link>
             </li>
+
+            {/* Player Profiles Link (Commented Out for Future Use) */}
+            {/*
             <li className="nav-item">
               <Link className="nav-link" to="/profiles">
                 Player Profiles
               </Link>
             </li>
+            */}
+            
             <li className="nav-item">
               <Link className="nav-link" to="/boxscores">
                 Box Scores

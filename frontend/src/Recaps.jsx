@@ -554,7 +554,7 @@ const STATIC_RECAP_DATA = [
         title: 'Week 1 -Week one of the Revolution Fall League got off to a sizzling start.',
         author: 'League Admin',
         category: 'Intro',
-        content: 'Week one of the Revolution Fall League got off to a sizzling start. There were surprise wins, forty-point showcases, and even a fifty-four-point clinic by an early MVP contender. Let\’s get into the action.',
+        content: 'Week one of the Revolution Fall League got off to a sizzling start. There were surprise wins, forty-point showcases, and even a fifty-four-point clinic by an early MVP contender. Let’s get into the action.',
         date: new Date('2025-10-06T00:00:00Z') // Adjusting date to be earlier than week 2
     },
     {

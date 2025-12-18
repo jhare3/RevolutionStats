@@ -104,7 +104,9 @@ const Home = () => {
             </div>
           </div>
           
-          {/* 5. Player Profiles Card (Existing) */}
+      
+          {/* 5. Player Profiles Card (Commented Out for Future Use) */}
+          {/*
           <div className="col">
             <div className="card h-100 shadow-sm border-danger">
               <div className="card-body text-center d-flex flex-column justify-content-between">
@@ -113,13 +115,14 @@ const Home = () => {
                   <h5 className="card-title fw-bold">Player Profiles</h5>
                   <p className="card-text text-muted">Browse full profiles and individual performance history.</p>
                 </div>
-                {/* Replaced Link with <a> */}
                 <a href="/profiles" className="btn btn-danger mt-3">
                   View Profiles
                 </a>
               </div>
             </div>
           </div>
+          */}
+
           
         </div>
       </div>
