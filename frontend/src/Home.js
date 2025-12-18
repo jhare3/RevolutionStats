@@ -1,5 +1,5 @@
 import React from "react";
-// Removed: import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // Rationale: Link requires a BrowserRouter context, which is unavailable in this isolated environment.
 // Replacing Link with standard <a> tags to fix the TypeError.
 
@@ -46,9 +46,9 @@ const Home = () => {
                   <p className="card-text text-muted">View league leaders and full player statistics.</p>
                 </div>
                 {/* Replaced Link with <a> */}
-                <a href="/player-stats" className="btn btn-danger mt-3">
+                <Link to="/player-stats" className="btn btn-danger mt-3">
                   View Stats
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -63,9 +63,9 @@ const Home = () => {
                   <p className="card-text text-muted">See current team rankings and league records.</p>
                 </div>
                 {/* Replaced Link with <a> */}
-                <a href="/teams" className="btn btn-danger mt-3">
+                <Link to="/teams" className="btn btn-danger mt-3">
                   View Standings
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -80,9 +80,9 @@ const Home = () => {
                   <p className="card-text text-muted">See detailed scores and game logs for all matchups.</p>
                 </div>
                 {/* Replaced Link with <a> */}
-                <a href="/boxscores" className="btn btn-danger mt-3">
+                <Link to="/boxscores" className="btn btn-danger mt-3">
                   View Box Scores
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -97,9 +97,9 @@ const Home = () => {
                   <p className="card-text text-muted">Read game summaries, highlights, and league news.</p>
                 </div>
                 {/* Replaced Link with <a> */}
-                <a href="/recaps" className="btn btn-danger mt-3">
+                <Link to="/recaps" className="btn btn-danger mt-3">
                   View Recaps
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -115,9 +115,9 @@ const Home = () => {
                   <h5 className="card-title fw-bold">Player Profiles</h5>
                   <p className="card-text text-muted">Browse full profiles and individual performance history.</p>
                 </div>
-                <a href="/profiles" className="btn btn-danger mt-3">
+                <Link to="/profiles" className="btn btn-danger mt-3">
                   View Profiles
-                </a>
+                </Link>
               </div>
             </div>
           </div>
