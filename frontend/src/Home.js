@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-// Rationale: Link requires a BrowserRouter context, which is unavailable in this isolated environment.
-// Replacing Link with standard <a> tags to fix the TypeError.
+
 
 const Home = () => {
   return (
