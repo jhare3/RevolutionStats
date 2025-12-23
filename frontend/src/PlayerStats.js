@@ -45,6 +45,7 @@ function PlayerStats() {
   const [selectedGame, setSelectedGame] = useState("all");
   const [selectedTeam, setSelectedTeam] = useState("all");
   const [statFilter, setStatFilter] = useState("ppg");
+  const [sortDirection, setSortDirection] = useState("desc");
   const [searchQuery, setSearchQuery] = useState("");
 
   // 1. DATA AGGREGATION LOGIC
@@ -154,14 +155,18 @@ function PlayerStats() {
   // 2. SORTING LOGIC
   const sortedPlayers = useMemo(() => {
     return [...players].sort((a, b) => {
-      const valA = String(a[statFilter]).replace('%', '');
-      const valB = String(b[statFilter]).replace('%', '');
-      return parseFloat(valB) - parseFloat(valA);
+      let valA = String(a[statFilter]).replace('%', '');
+      let valB = String(b[statFilter]).replace('%', '');
+      
+      const numA = parseFloat(valA);
+      const numB = parseFloat(valB);
+
+      let comparison = numB - numA;
+      return sortDirection === "asc" ? comparison * -1 : comparison;
     });
-  }, [players, statFilter]);
+  }, [players, statFilter, sortDirection]);
 
   // 3. DYNAMIC COLUMN DEFINITIONS
-  // This logic moves the "Active" stat category to the front of the stat columns
   const dynamicColumns = useMemo(() => {
     const allStatCols = [
         { id: 'ppg', label: 'PPG', render: (p) => p.ppg },
@@ -187,6 +192,15 @@ function PlayerStats() {
     }
     return allStatCols;
   }, [statFilter]);
+
+  const handleSortRequest = (key) => {
+    if (statFilter === key) {
+        setSortDirection(sortDirection === "asc" ? "desc" : "asc");
+    } else {
+        setStatFilter(key);
+        setSortDirection("desc");
+    }
+  };
 
   return (
     <div className="min-vh-100" style={{ backgroundColor: '#ffffff' }}>
@@ -226,6 +240,11 @@ function PlayerStats() {
             text-transform: uppercase;
             border-bottom: 2px solid #dee2e6;
             white-space: nowrap;
+            cursor: pointer;
+            transition: background 0.2s;
+          }
+          .table thead th:hover {
+            background: #f1f1f1;
           }
           .table td {
             font-size: 0.85rem;
@@ -295,7 +314,14 @@ function PlayerStats() {
             </div>
             <div className="col-12 col-md-3">
               <label className="form-label">Sort Category</label>
-              <select className="form-select fw-bold text-danger" value={statFilter} onChange={(e) => setStatFilter(e.target.value)}>
+              <select 
+                className="form-select fw-bold text-danger" 
+                value={statFilter} 
+                onChange={(e) => {
+                    setStatFilter(e.target.value);
+                    setSortDirection("desc");
+                }}
+              >
                 {statOptions.map((opt) => <option key={opt.key} value={opt.key}>{opt.label}</option>)}
               </select>
             </div>
@@ -312,8 +338,12 @@ function PlayerStats() {
                 <th>Team</th>
                 <th>GP</th>
                 {dynamicColumns.map(col => (
-                  <th key={col.id} className={col.id === statFilter ? "active-col-cell" : ""}>
-                    {col.label}
+                  <th 
+                    key={col.id} 
+                    onClick={() => handleSortRequest(col.id)}
+                    className={statFilter === col.id ? "active-col-cell" : ""}
+                  >
+                    {col.label} {statFilter === col.id ? (sortDirection === 'asc' ? '↑' : '↓') : ''}
                   </th>
                 ))}
               </tr>
@@ -326,7 +356,7 @@ function PlayerStats() {
                   <td>{p.team}</td>
                   <td>{p.gamesPlayed}</td>
                   {dynamicColumns.map(col => (
-                    <td key={col.id} className={col.id === statFilter ? "active-col-cell" : ""}>
+                    <td key={col.id} className={statFilter === col.id ? "active-col-cell" : ""}>
                       {col.render(p)}
                     </td>
                   ))}
@@ -337,7 +367,7 @@ function PlayerStats() {
         </div>
         
         <div className="mt-3 text-muted small italic">
-          * Tables are sorted by the selected category. The active stat is automatically moved to the left for better visibility.
+          * Tables are sorted by the selected category. Click any column header to sort; the active stat moves to the left for better visibility.
         </div>
       </div>
     </div>
