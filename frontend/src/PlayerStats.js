@@ -7,16 +7,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const statOptions = [
   { key: "ppg", label: "Points Per Game" },
-  { key: "apg", label: "Assists Per Game" },
   { key: "rpg", label: "Rebounds Per Game" },
+  { key: "apg", label: "Assists Per Game" },
   { key: "spg", label: "Steals Per Game" },
   { key: "bpg", label: "Blocks Per Game" },
-  { key: "ftpct", label: "Free Throw %" },
-  { key: "fg3pct", label: "3-Point %" },
   { key: "points", label: "Total Points" },
+  { key: "rebounds", label: "Total Rebounds" },
+  { key: "assists", label: "Total Assists" },
   { key: "steals", label: "Total Steals" },
   { key: "blocks", label: "Total Blocks" },
   { key: "fgpct", label: "Field Goal %" },
+  { key: "fg2pct", label: "2-Point %" },
+  { key: "fg3pct", label: "3-Point %" },
+  { key: "ftpct", label: "Free Throw %" },
 ];
 
 function calculatePercent(made, attempt) {
