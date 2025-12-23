@@ -176,7 +176,7 @@ const Home = () => {
             <div className="card liquid-glass-card h-100 p-3 p-md-4 border-0">
               <div className="card-body text-center d-flex flex-column justify-content-between p-0">
                 <div>
-                  <h6 className="fw-bold mb-2 text-dark small">BOX SCORES</h6>
+                  <h6 className="fw-bold mb-2 text-dark small">BOX SCORE ARCHIVES</h6>
                   <p className="card-text text-muted x-small">Full game logs and individual scoring breakdowns.</p>
                 </div>
                 <Link to="/boxscores" className="card-btn mt-3 text-decoration-none d-flex align-items-center justify-content-center">

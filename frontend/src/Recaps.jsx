@@ -613,9 +613,6 @@ const formatDate = (dateInput) => {
   }
 };
 
-/**
- * Extracts the dynamic header (e.g., 'Light Blue Top Performers') from the content string.
- */
 const extractPerformerTitle = (performerString) => {
     if (!performerString) return 'Top Performers';
     const index = performerString.indexOf(':');
@@ -625,9 +622,6 @@ const extractPerformerTitle = (performerString) => {
     return 'Top Performers';
 };
 
-/**
- * Extracts only the details (the part after the first colon) from the content string.
- */
 const extractPerformerDetails = (performerString) => {
     if (!performerString) return '';
     const index = performerString.indexOf(':');
@@ -637,51 +631,37 @@ const extractPerformerDetails = (performerString) => {
     return performerString;
 };
 
-// Determine all unique weeks available, sorted descending
-const ALL_WEEKS = Array.from(new Set(STATIC_RECAP_DATA.map(item => getWeekFromTitle(item.title)))).filter(w => w !== null).sort((a, b) => b - a);
-
-
 // --- COMPONENT: RecapCard (Display Logic) ---
 const RecapCard = ({ post }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpand = () => setIsExpanded(!isExpanded);
 
-  // Combine content for expansion check
   const fullText = [post.content, post.topPerformers1, post.topPerformers2, post.newsUpdates].filter(Boolean).join('\n\n');
-  const needsExpansion = fullText.length > 500;
+  const needsExpansion = fullText.length > 400;
   
-  // Conditionally render detailed sections
   const renderDetail = (title, content, icon) => {
       if (!content) return null;
-
-      // Use the new helper to get just the player details for the content body
       const detailContent = extractPerformerDetails(content);
       
       return (
-          // Use border-top and text-danger for primary accent
           <div className="mb-3 pt-3 border-top border-danger-subtle">
-              {/* Header Title (e.g., "Light Blue Top Performers") */}
               <h6 className="fw-bold text-danger mb-2 d-flex align-items-center small text-uppercase">
                   <i className={`bi bi-${icon} me-2 text-danger`}></i> {title}
               </h6>
-              {/* Content Body (e.g., "Jibril Abdullahi - 20 points...") */}
-              <div className="text-light-emphasis whitespace-pre-wrap small lh-base">{detailContent}</div>
+              <div className="text-dark-emphasis whitespace-pre-wrap small lh-base">{detailContent}</div>
           </div>
       );
   };
   
-  // The block containing all the content sections
   const mainContentBlock = (
       <>
-          {/* General Recap Header */}
           <h6 className="fw-bold text-dark mb-2 d-flex align-items-center small text-uppercase">
              <i className="bi bi-file-earmark-text me-2 text-danger"></i> 
              {post.category === 'Intro' ? 'Weekly Overview' : 'General Recap'}
           </h6>
           <div className="text-secondary whitespace-pre-wrap mb-4 small lh-base">{post.content || 'No content provided.'}</div>
           
-          {/* Render both Top Performer sections using extracted dynamic titles and full content string */}
           {renderDetail(extractPerformerTitle(post.topPerformers1), post.topPerformers1, 'star-fill')}
           {renderDetail(extractPerformerTitle(post.topPerformers2), post.topPerformers2, 'star-fill')}
           
@@ -689,52 +669,42 @@ const RecapCard = ({ post }) => {
       </>
   );
 
-  // Custom style for the fixed height for collapsed state
   const collapsedStyle = {
-    maxHeight: '200px',
+    maxHeight: '220px',
     overflow: 'hidden',
     position: 'relative',
     transition: 'max-height 0.3s ease-in-out',
   };
 
-  // Custom style for the fade overlay
   const fadeStyle = {
     position: 'absolute',
     bottom: 0,
     left: 0,
     right: 0,
     height: '60px',
-    // Must be black text on black background
     background: 'linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0))',
     pointerEvents: 'none',
     zIndex: 1,
   };
 
   return (
-    // col-12 ensures full width on all screen sizes, including desktop
     <div className="col-12 mb-4">
-      {/* 1. Card Container: Added border border-secondary for a black/dark outline */}
-      <div className="card h-100 shadow-lg border border-secondary rounded-4">
+      <div className="card h-100 shadow-sm border border-light-subtle rounded-4">
         <div className="card-body d-flex flex-column h-100 p-4 p-sm-5">
           
-          {/* Header & Meta */}
           <div className="d-flex justify-content-between align-items-start mb-3">
-            {/* Red accent badge */}
-            <span className="badge text-bg-danger fs-6 px-3 py-1 rounded-pill shadow-sm">
+            <span className="badge text-bg-danger px-3 py-1 rounded-pill shadow-sm small fw-bold">
               {post.category || 'Recap'}
             </span>
              {post.gameDate && (
-                // Lighter background badge
-                <span className="badge text-bg-light text-danger border border-danger-subtle fs-6 px-3 py-1 rounded-pill">
+                <span className="badge text-bg-light text-danger border border-danger-subtle px-3 py-1 rounded-pill small">
                     Game: {post.gameDate}
                 </span>
             )}
           </div>
           
-          {/* Title */}
-          <h5 className="fw-bold text-dark mb-3 fs-4">{post.title || 'Untitled Post'}</h5>
+          <h5 className="fw-bold text-dark mb-3 fs-4 text-uppercase italic">{post.title || 'Untitled Post'}</h5>
           
-          {/* Author and Date metadata */}
           <p className="text-muted small mb-4 d-flex flex-wrap align-items-center">
             <span className="d-flex align-items-center text-dark-emphasis me-3">
                 <i className="bi bi-person-circle text-danger me-2"></i>
@@ -746,12 +716,10 @@ const RecapCard = ({ post }) => {
             </span>
           </p>
 
-          {/* Main Content Area (Expandable) */}
           <div className="flex-grow-1 position-relative mb-3">
             <div 
               style={(!isExpanded && needsExpansion) ? collapsedStyle : {}} 
-              // 2. Content Block: White background and secondary (dark) border
-              className="p-3 border border-secondary rounded-3 bg-white"> 
+              className="p-3 border border-light-subtle rounded-3 bg-white"> 
               {mainContentBlock}
             </div>
             
@@ -760,17 +728,15 @@ const RecapCard = ({ post }) => {
             )}
           </div>
 
-          {/* Read More Button */}
           {needsExpansion && (
-            <div className="mt-auto pt-3 border-top border-light">
+            <div className="mt-auto pt-3">
               <button
                 onClick={toggleExpand}
-                // Link style button with red text
-                className="btn btn-link text-danger fw-bold text-decoration-none p-0 d-flex align-items-center"
+                className="btn btn-link text-danger fw-bold text-decoration-none p-0 d-flex align-items-center small"
               >
                 {isExpanded ? 
-                    <>Show Less Detail <i className="bi bi-chevron-up ms-2 small"></i></> : 
-                    <>Show Full Detail <i className="bi bi-chevron-down ms-2 small"></i></>
+                    <>SHOW LESS <i className="bi bi-chevron-up ms-2"></i></> : 
+                    <>SHOW FULL DETAIL <i className="bi bi-chevron-down ms-2"></i></>
                 }
               </button>
             </div>
@@ -783,12 +749,10 @@ const RecapCard = ({ post }) => {
 
 // --- CORE FEATURE COMPONENT: Recaps ---
 const Recaps = () => {
-    // Sort posts once by date descending (most recent first)
     const sortedPosts = useMemo(() => {
-        return STATIC_RECAP_DATA.sort((a, b) => b.date.getTime() - a.date.getTime());
+        return [...STATIC_RECAP_DATA].sort((a, b) => b.date.getTime() - a.date.getTime());
     }, []);
 
-    // 1. FILTERING LOGIC
     const allPosts = useMemo(() => {
         return sortedPosts.map(post => ({
             ...post,
@@ -803,15 +767,13 @@ const Recaps = () => {
         return [...new Set(weeks)].sort((a, b) => b - a);
     }, [allPosts]);
 
-    const [activeWeek, setActiveWeek] = useState(ALL_WEEKS.length > 0 ? ALL_WEEKS[0] : null);
+    const [activeWeek, setActiveWeek] = useState(uniqueWeeks.length > 0 ? uniqueWeeks[0] : null);
     
-    // Set the latest week as default active week
     useEffect(() => {
         if (!activeWeek && uniqueWeeks.length > 0) {
             setActiveWeek(uniqueWeeks[0]);
         }
     }, [uniqueWeeks, activeWeek]);
-
 
     const filteredPosts = useMemo(() => {
         if (!activeWeek) return [];
@@ -819,101 +781,76 @@ const Recaps = () => {
     }, [activeWeek, allPosts]);
 
     const nonWeeklyPosts = useMemo(() => {
-        // Since all new posts are weekly, this array will be empty for now, but the logic remains sound.
         return allPosts.filter(post => post.week === null);
     }, [allPosts]);
     
-    // 2. RENDER LOGIC
     return (
-        // Main container centered on the page with shadow
-        <div className="container py-4">
-            <div className="card bg-white p-4 p-md-5 rounded-4 shadow-lg border-0">
-                {/* Header: Reduced from mb-5/pb-5 to mb-4/pb-4 for tighter spacing */}
-                <header className="text-center pb-3 pb-md-4 border-bottom border-danger-subtle mb-4">
-                    {/* Ensure text is visible against potential black background */}
-                    <h1 className="display-4 fw-bold text-dark mb-2">
+        <div className="min-vh-100" style={{ backgroundColor: '#ffffff' }}>
+            <div className="container py-4 py-md-5">
+                <header className="text-center pb-3 pb-md-4 mb-5">
+                    <h1 className="display-5 fw-bold text-dark mb-2 text-uppercase italic">
                         League <span className="text-danger">Recaps</span> 
                     </h1>
-                    <p className="lead text-secondary mx-auto" style={{ maxWidth: '600px' }}>
-                        View game summaries, top performers, and league analysis from the Revolution League.
+                    <div className="mx-auto bg-danger" style={{ width: '50px', height: '4px', borderRadius: '2px' }}></div>
+                    <p className="lead text-secondary mt-3 mx-auto small" style={{ maxWidth: '600px' }}>
+                        Weekly game summaries, top performers, and league analysis.
                     </p>
                 </header>
                 
-                {/* Week Selector Navigation: Reduced outer div margin from mb-5 to mb-4 */}
                 {uniqueWeeks.length > 0 && (
-                    <div className="mb-4">
-                        <h3 className="text-center text-dark-emphasis mb-4 fs-5 fw-bold">Filter By Week:</h3>
-                        <div className="d-flex justify-content-center flex-wrap gap-2 px-2">
+                    <div className="mb-5 text-center">
+                        <h3 className="text-dark-emphasis mb-4 fs-6 fw-bold text-uppercase tracking-wider">Filter By Week</h3>
+                        <div className="d-flex justify-content-center flex-wrap gap-2">
                             {uniqueWeeks.map(week => (
                             <button
                                 key={week}
                                 onClick={() => setActiveWeek(week)}
-                                // Removed transition-all (Tailwind class)
-                                className={`btn btn-sm fw-bold rounded-pill ${activeWeek === week 
-                                    ? 'btn-danger shadow-sm' // Active button uses solid danger
-                                    : 'btn-outline-danger shadow-sm' // Inactive button is outlined
+                                className={`btn btn-sm fw-bold rounded-pill px-4 py-2 shadow-sm transition-all ${activeWeek === week 
+                                    ? 'btn-danger' 
+                                    : 'btn-outline-danger' 
                                 }`}
                             >
-                                Week {week}
+                                WEEK {week}
                             </button>
                             ))}
                         </div>
                     </div>
                 )}
                 
-                <main className="py-4">
+                <main>
                     {activeWeek && filteredPosts.length > 0 && (
-                        <>
-                        {/* Recaps Title: Reduced margin from mb-5 to mb-4 */}
-                        <h2 className="text-center text-dark mb-4 fs-3 fw-bolder border-bottom border-danger pb-3">
-                            Week {activeWeek} Recaps
-                        </h2>
-                        {/* Bootstrap Grid: All cards are now full-width (col-12 is handled inside RecapCard) */}
-                        <div className="row g-4 justify-content-center"> 
-                            {filteredPosts.map((post) => (
-                                <RecapCard key={post.id} post={post} />
-                            ))}
+                        <div className="row justify-content-center">
+                            <div className="col-lg-9">
+                                <h2 className="text-dark mb-4 fs-4 fw-bolder border-bottom border-danger-subtle pb-3 text-uppercase">
+                                    Week {activeWeek} Summaries
+                                </h2>
+                                <div className="row g-4"> 
+                                    {filteredPosts.map((post) => (
+                                        <RecapCard key={post.id} post={post} />
+                                    ))}
+                                </div>
+                            </div>
                         </div>
-                        </>
                     )}
                     
-                    {/* General News Section for non-weekly posts */}
                     {nonWeeklyPosts.length > 0 && (
-                        <div className={`mt-5 pt-5 border-top border-light`}>
-                        <h2 className="text-center text-dark mb-5 fs-3 fw-bolder border-bottom border-secondary pb-3">
-                            General League News & Analysis
-                        </h2 >
-                        {/* Bootstrap Grid for general news */}
-                        <div className="row g-4 justify-content-center">
-                            {nonWeeklyPosts.map((post) => (
-                            <RecapCard key={post.id} post={post} />
-                            ))}
-                        </div>
-                        </div>
-                    )}
-                    
-                    {/* Fallback if a week is selected but has no posts */}
-                    {activeWeek && filteredPosts.length === 0 && nonWeeklyPosts.length > 0 && (
-                         <div className="text-center text-secondary py-5">
-                            No recaps available for Week {activeWeek}. Check the General News below.
+                        <div className="row justify-content-center mt-5 pt-5 border-top border-light-subtle">
+                            <div className="col-lg-9">
+                                <h2 className="text-dark mb-4 fs-4 fw-bolder border-bottom border-secondary-subtle pb-3 text-uppercase">
+                                    General League News
+                                </h2>
+                                <div className="row g-4">
+                                    {nonWeeklyPosts.map((post) => (
+                                        <RecapCard key={post.id} post={post} />
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     )}
                 </main>
             </div>
         </div>
     );
-  };
-  
-// --- MAIN APP COMPONENT ---
-function App() {
-  return (
-    // Set a subtle background and a max-width container for desktop display
-    <div className="min-vh-100 bg-dark rounded-4" style={{ fontFamily: 'Inter, sans-serif' }}>
-        <div className="container-xxl p-2 p-sm-5 mx-auto"> 
-            <Recaps />
-        </div>
-    </div>
-  );
-}
+};
 
-export default App;
+export default Recaps;
