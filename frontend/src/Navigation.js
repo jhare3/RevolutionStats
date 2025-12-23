@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-// Note: Bootstrap imports are expected to be available via CDN or local installation
+// Standard Bootstrap imports
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const Navigation = () => {
   const location = useLocation();
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -20,107 +21,145 @@ const Navigation = () => {
     <>
       <style>
         {`
-          .glass-nav-container {
+          .custom-nav-container {
             position: sticky;
-            top: 15px;
+            top: 0;
             z-index: 1050;
             width: 100%;
-            padding: 0 15px;
           }
 
-          .glass-navbar {
-            background: rgba(255, 255, 255, 0.05); /* Very translucent */
-            backdrop-filter: blur(12px) saturate(180%);
-            -webkit-backdrop-filter: blur(12px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 100px; /* Capsule shape */
-            padding: 0.5rem 1.5rem;
+          .custom-navbar {
+            background: #ffffff; /* Solid background for clarity */
+            border-bottom: 2px solid #eeeeee;
+            padding: 0.75rem 1.5rem;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
           }
 
-          /* Dark theme text optimization */
-          .glass-navbar .navbar-brand, 
-          .glass-navbar .nav-link {
-            color: rgba(147, 147, 147, 0.85) !important;
-            font-weight: 500;
+          .custom-navbar .navbar-brand {
+            color: #1a1a1a !important;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+          }
+
+          .custom-navbar .nav-link {
+            color: #444444 !important;
+            font-weight: 600;
+            padding: 0.5rem 1rem !important;
             transition: color 0.2s ease;
           }
 
-          .glass-navbar .nav-link:hover {
-            color: #ff4d4d !important; /* Revolution Red accent */
+          .custom-navbar .nav-link:hover {
+            color: #ff4d4d !important;
           }
 
-          .glass-navbar .nav-link.active {
-            color: #000000ff !important;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-            padding-left: 1rem;
-            padding-right: 1rem;
+          .custom-navbar .nav-link.active {
+            color: #ff4d4d !important;
+            position: relative;
           }
 
+          /* Visually Obvious Hamburger Toggle */
           .navbar-toggler {
-            border: none !important;
-            padding: 0;
+            border: 2px solid #1a1a1a !important;
+            padding: 4px 8px;
+            background-color: #f8f9fa !important;
           }
 
-          .navbar-toggler:focus {
-            box-shadow: none !important;
+          /* Custom CSS Hamburger (Alternative to Bootstrap Icons) */
+          .hamburger-icon {
+            display: inline-block;
+            width: 24px;
+            height: 2px;
+            background-color: #1a1a1a;
+            position: relative;
+            vertical-align: middle;
           }
 
-          .glass-logo {
-            height: 45px;
+          .hamburger-icon::before,
+          .hamburger-icon::after {
+            content: "";
+            width: 24px;
+            height: 2px;
+            background-color: #1a1a1a;
+            position: absolute;
+            left: 0;
+          }
+
+          .hamburger-icon::before { top: -8px; }
+          .hamburger-icon::after { bottom: -8px; }
+
+          .custom-logo {
+            height: 40px;
             margin-right: 12px;
-            border-radius: 50%;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
           }
 
           @media (max-width: 991px) {
-            .glass-navbar {
-              border-radius: 20px;
-              padding: 0.75rem 1rem;
-            }
             .navbar-collapse {
-              background: rgba(0, 0, 0, 0.2);
-              border-radius: 15px;
+              background: #ffffff;
+              border-top: 1px solid #eeeeee;
               margin-top: 10px;
-              padding: 15px;
+              padding: 20px;
+              border-radius: 8px;
+              box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+            
+            .nav-item {
+              border-bottom: 1px solid #f8f9fa;
+              width: 100%;
+              text-align: center;
+            }
+
+            .nav-item:last-child {
+              border-bottom: none;
+            }
+
+            .custom-navbar .nav-link.active {
+              background-color: #fff5f5;
+              border-radius: 4px;
             }
           }
         `}
       </style>
 
-      <div className="glass-nav-container">
-        <nav className="navbar navbar-expand-lg glass-navbar">
+      <div className="custom-nav-container">
+        <nav className="navbar navbar-expand-lg custom-navbar">
           <div className="container-fluid p-0">
             <Link className="navbar-brand d-flex align-items-center" to="/">
               <img
                 src="/revolutionLogo.jpg"
                 alt="Logo"
-                className="glass-logo"
+                className="custom-logo"
               />
-              <span className="d-none d-sm-inline">Revolution Basketball</span>
+              <span>REVOLUTION</span>
             </Link>
 
+            {/* Optimized Toggle Button */}
             <button
-              className="navbar-toggler text-white"
+              className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarNav"
               aria-controls="navbarNav"
-              aria-expanded="false"
+              aria-expanded={isNavExpanded}
               aria-label="Toggle navigation"
+              onClick={() => setIsNavExpanded(!isNavExpanded)}
             >
-              <i className="bi bi-list fs-1 text-white"></i>
+              <span className="hamburger-icon"></span>
             </button>
 
-            <div className="collapse navbar-collapse" id="navbarNav">
+            <div 
+              className={`collapse navbar-collapse ${isNavExpanded ? "show" : ""}`} 
+              id="navbarNav"
+            >
               <ul className="navbar-nav ms-auto align-items-center">
                 {navLinks.map((link) => (
                   <li className="nav-item mx-lg-1" key={link.path}>
                     <Link
                       className={`nav-link ${location.pathname === link.path ? "active" : ""}`}
                       to={link.path}
+                      onClick={() => setIsNavExpanded(false)} // Close menu on click
                     >
                       {link.name}
                     </Link>

@@ -9,40 +9,46 @@ const Home = () => {
           .hero-section {
             background-image: url("/revolutionHero.gif");
             background-size: cover;
-            background-position: left center;
+            background-position: center;
             position: relative;
-            /* Responsive padding: smaller on mobile, larger on desktop */
-            padding: clamp(4rem, 15vh, 8rem) 0;
+            /* Narrower height for a cleaner look */
+            padding: clamp(2.5rem, 10vh, 5rem) 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
           }
 
-          /* Optimized glass overlay for mobile */
+          /* Removed glass effect: Solid background with high contrast */
           .glass-hero-capsule {
-            background: rgba(0, 0, 0, 0.45);
-            backdrop-filter: blur(12px) saturate(160%);
-            -webkit-backdrop-filter: blur(12px) saturate(160%);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            padding: clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 8vw, 3rem);
-            border-radius: 100px;
+            background: #1a1a1a; 
+            border: 2px solid #ff4d4d;
+            /* Even border/padding around text for uniform spacing */
+            padding: clamp(1.25rem, 5vw, 2.25rem);
+            border-radius: 12px;
             display: inline-block;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-            max-width: 90%; /* Prevent hitting screen edges on mobile */
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+            width: 92%;
+            max-width: 650px;
           }
 
-          /* Shrunken title with fluid sizing for mobile/iPhone */
+          /* Optimized Title for Mobile */
           .hero-title-pop {
-            font-size: clamp(1.5rem, 6vw, 2.5rem);
+            font-size: clamp(1.5rem, 8vw, 3rem); 
             font-weight: 900;
-            letter-spacing: -0.5px;
-            color: #ff4d4d;
-            text-shadow: 0 0 15px rgba(255, 77, 77, 0.3), 2px 2px 4px rgba(0, 0, 0, 0.8);
+            letter-spacing: -1px;
+            color: #ffffff; 
+            text-shadow: 3px 3px 0px #ff4d4d; 
             margin: 0;
             line-height: 1.1;
+            text-transform: uppercase;
           }
 
           .hero-subtitle {
-            font-size: clamp(0.7rem, 3vw, 0.9rem);
-            letter-spacing: clamp(1px, 1vw, 3px);
-            opacity: 0.95;
+            font-size: clamp(0.75rem, 2.8vw, 0.95rem);
+            letter-spacing: 2px;
+            color: #ff4d4d;
+            font-weight: 800;
+            margin-top: 12px;
           }
 
           .section-heading {
@@ -66,27 +72,24 @@ const Home = () => {
             border-radius: 2px;
           }
 
-          /* Optimized cards for touch interaction */
+          /* Solid Cards: No longer using liquid glass */
           .liquid-glass-card {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(0, 0, 0, 0.08);
+            background: #ffffff;
+            border: 1px solid #eeeeee;
             border-radius: 1.75rem;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
           }
 
           @media (hover: hover) {
             .liquid-glass-card:hover {
               transform: translateY(-8px);
-              background: #ffffff;
               box-shadow: 0 20px 40px rgba(220, 53, 69, 0.12);
-              border: 1px solid rgba(220, 53, 69, 0.2);
+              border: 1px solid rgba(220, 53, 69, 0.15);
             }
           }
 
-          /* Ensure cards look good when stacked on mobile */
           @media (max-width: 576px) {
             .liquid-glass-card {
               border-radius: 1.25rem;
@@ -110,16 +113,16 @@ const Home = () => {
             background: #1a1a1a;
             color: white;
             border: none;
-            padding: 0.75rem 1.5rem; /* Larger touch target for mobile */
+            padding: 0.85rem 1.5rem;
             font-size: 0.8rem;
             font-weight: 700;
             border-radius: 100px;
-            transition: all 0.3s ease;
-            width: 100%; /* Full width buttons on mobile feel more native */
+            transition: all 0.2s ease;
+            width: 100%;
           }
 
           .card-btn:active {
-            transform: scale(0.95);
+            transform: scale(0.96);
             background: #dc3545;
           }
 
@@ -132,12 +135,12 @@ const Home = () => {
 
       {/* Hero Section */}
       <div className="hero-section text-center">
-        <div className="container px-3">
+        <div className="container px-3 d-flex justify-content-center">
           <div className="glass-hero-capsule">
             <h1 className="hero-title-pop fst-italic">
               REVOLUTION BASKETBALL
             </h1>
-            <p className="text-white mt-2 mb-0 fw-bold text-uppercase hero-subtitle">
+            <p className="hero-subtitle text-uppercase mb-0">
               The Fall League Hub
             </p>
           </div>
@@ -151,10 +154,9 @@ const Home = () => {
         </div>
         
         <div className="row g-3 g-md-4 row-cols-1 row-cols-sm-2 row-cols-lg-4 justify-content-center">
-
-          {/* 1. Player Stats Card */}
+          {/* Player Stats */}
           <div className="col">
-            <div className="card liquid-glass-card h-100 p-3 p-md-4 border-0 shadow-sm">
+            <div className="card liquid-glass-card h-100 p-3 p-md-4 border-0">
               <div className="card-body text-center d-flex flex-column justify-content-between p-0">
                 <div>
                   <div className="card-icon-wrapper">
@@ -170,9 +172,9 @@ const Home = () => {
             </div>
           </div>
 
-          {/* 2. Standings Card */}
+          {/* Standings */}
           <div className="col">
-            <div className="card liquid-glass-card h-100 p-3 p-md-4 border-0 shadow-sm">
+            <div className="card liquid-glass-card h-100 p-3 p-md-4 border-0">
               <div className="card-body text-center d-flex flex-column justify-content-between p-0">
                 <div>
                   <div className="card-icon-wrapper">
@@ -188,9 +190,9 @@ const Home = () => {
             </div>
           </div>
           
-          {/* 3. Box Scores Card */}
+          {/* Box Scores */}
           <div className="col">
-            <div className="card liquid-glass-card h-100 p-3 p-md-4 border-0 shadow-sm">
+            <div className="card liquid-glass-card h-100 p-3 p-md-4 border-0">
               <div className="card-body text-center d-flex flex-column justify-content-between p-0">
                 <div>
                   <div className="card-icon-wrapper">
@@ -206,9 +208,9 @@ const Home = () => {
             </div>
           </div>
 
-          {/* 4. Game Recaps Card */}
+          {/* Game Recaps */}
           <div className="col">
-            <div className="card liquid-glass-card h-100 p-3 p-md-4 border-0 shadow-sm">
+            <div className="card liquid-glass-card h-100 p-3 p-md-4 border-0">
               <div className="card-body text-center d-flex flex-column justify-content-between p-0">
                 <div>
                   <div className="card-icon-wrapper">
@@ -223,7 +225,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-          
         </div>
       </div>
     </div>
