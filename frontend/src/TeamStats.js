@@ -232,9 +232,7 @@ function TeamStats() {
                                 ))}
                             </select>
                         </div>
-                        <div className="col-12 col-md-8 text-md-end text-muted small italic pb-2">
-                            * Active column automatically shifts left for easier comparison.
-                        </div>
+                    
                     </div>
                 </div>
 

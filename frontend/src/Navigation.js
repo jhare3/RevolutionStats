@@ -14,7 +14,7 @@ const Navigation = () => {
     { name: "Player Stats", path: "/player-stats" },
     { name: "Standings", path: "/teams" },
     { name: "Recaps", path: "/recaps" },
-    { name: "Box Scores", path: "/boxscores" },
+    { name: "Box Score Archives", path: "/boxscores" },
   ];
 
   return (
