@@ -96,19 +96,6 @@ const Home = () => {
             }
           }
 
-          .card-icon-wrapper {
-            width: 44px;
-            height: 44px;
-            background: linear-gradient(135deg, #dc3545 0%, #921a25 100%);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 1rem;
-            margin: 0 auto 1rem;
-            box-shadow: 0 4px 12px rgba(220, 53, 69, 0.25);
-          }
-
           .card-btn {
             background: #1a1a1a;
             color: white;
@@ -159,9 +146,6 @@ const Home = () => {
             <div className="card liquid-glass-card h-100 p-3 p-md-4 border-0">
               <div className="card-body text-center d-flex flex-column justify-content-between p-0">
                 <div>
-                  <div className="card-icon-wrapper">
-                    <i className="bi bi-person-fill fs-5"></i>
-                  </div>
                   <h6 className="fw-bold mb-2 text-dark small">PLAYER STATS</h6>
                   <p className="card-text text-muted x-small">League leaders and detailed performance metrics.</p>
                 </div>
@@ -177,9 +161,6 @@ const Home = () => {
             <div className="card liquid-glass-card h-100 p-3 p-md-4 border-0">
               <div className="card-body text-center d-flex flex-column justify-content-between p-0">
                 <div>
-                  <div className="card-icon-wrapper">
-                    <i className="bi bi-bar-chart-fill fs-5"></i>
-                  </div>
                   <h6 className="fw-bold mb-2 text-dark small">STANDINGS</h6>
                   <p className="card-text text-muted x-small">Real-time team rankings and seasonal records.</p>
                 </div>
@@ -195,9 +176,6 @@ const Home = () => {
             <div className="card liquid-glass-card h-100 p-3 p-md-4 border-0">
               <div className="card-body text-center d-flex flex-column justify-content-between p-0">
                 <div>
-                  <div className="card-icon-wrapper">
-                    <i className="bi bi-list-columns-reverse fs-5"></i>
-                  </div>
                   <h6 className="fw-bold mb-2 text-dark small">BOX SCORES</h6>
                   <p className="card-text text-muted x-small">Full game logs and individual scoring breakdowns.</p>
                 </div>
@@ -213,9 +191,6 @@ const Home = () => {
             <div className="card liquid-glass-card h-100 p-3 p-md-4 border-0">
               <div className="card-body text-center d-flex flex-column justify-content-between p-0">
                 <div>
-                  <div className="card-icon-wrapper">
-                    <i className="bi bi-file-text-fill fs-5"></i>
-                  </div>
                   <h6 className="fw-bold mb-2 text-dark small">GAME RECAPS</h6>
                   <p className="card-text text-muted x-small">Highlights, analysis, and weekly summaries.</p>
                 </div>
