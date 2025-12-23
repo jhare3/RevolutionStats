@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// Switching BrowserRouter to HashRouter to fix 404 errors on page reload/direct navigation
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Navigation from "./Navigation";
 
 // All pages are directly in src/
@@ -17,20 +18,19 @@ function App() {
   return (
     <Router>
       <Navigation />
-      <div style={{ backgroundColor: '#ffffffff' }}>
-
-      <div className="container mt-4">
-        
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/player-stats" element={<PlayerStats />} />
-          <Route path="/teams" element={<TeamStats />} />
-          <Route path="/recaps" element={<Recaps />} />
-          <Route path="/profiles" element={<PlayerDirectory />} />
-          <Route path="/profiles/:playerName" element={<PlayerProfileDetail />} />
-          <Route path="/boxscores" element={<BoxScores />} />
-        </Routes>
-      </div>
+      {/* Container wrapper for site-wide background and spacing */}
+      <div style={{ backgroundColor: '#ffffff' }}>
+        <div className="container mt-4">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/player-stats" element={<PlayerStats />} />
+            <Route path="/teams" element={<TeamStats />} />
+            <Route path="/recaps" element={<Recaps />} />
+            <Route path="/profiles" element={<PlayerDirectory />} />
+            <Route path="/profiles/:playerName" element={<PlayerProfileDetail />} />
+            <Route path="/boxscores" element={<BoxScores />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );
