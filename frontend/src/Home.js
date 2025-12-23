@@ -12,7 +12,7 @@ const Home = () => {
             background-position: center;
             position: relative;
             /* Narrower height for a cleaner look */
-            padding: clamp(2.5rem, 10vh, 5rem) 0;
+            padding: clamp(2.5rem, 2.5rem, 5rem) 0;
             display: flex;
             align-items: center;
             justify-content: center;
