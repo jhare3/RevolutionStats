@@ -67,27 +67,58 @@ const Navigation = () => {
           }
 
           /* Custom CSS Hamburger (Alternative to Bootstrap Icons) */
+          /* Sleeker Toggle Button */
+          .navbar-toggler {
+            border: none !important;
+            padding: 0;
+            background: transparent !important;
+            outline: none !important;
+            box-shadow: none !important;
+          }
+
+          /* The Icon Container */
           .hamburger-icon {
-            display: inline-block;
-            width: 24px;
-            height: 2px;
-            background-color: #1a1a1a;
+            width: 30px;
+            height: 20px;
             position: relative;
-            vertical-align: middle;
+            display: block;
+            cursor: pointer;
           }
 
-          .hamburger-icon::before,
-          .hamburger-icon::after {
-            content: "";
-            width: 24px;
-            height: 2px;
-            background-color: #1a1a1a;
+          /* Individual Bars */
+          .hamburger-icon span {
+            display: block;
             position: absolute;
+            height: 2px;
+            width: 100%;
+            background: #1a1a1a;
+            border-radius: 9px;
+            opacity: 1;
             left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
           }
 
-          .hamburger-icon::before { top: -8px; }
-          .hamburger-icon::after { bottom: -8px; }
+          /* Bar Positions */
+          .hamburger-icon span:nth-child(1) { top: 0px; }
+          .hamburger-icon span:nth-child(2) { top: 9px; }
+          .hamburger-icon span:nth-child(3) { top: 18px; }
+
+          /* Animated Transformation to 'X' */
+          .hamburger-icon.open span:nth-child(1) {
+            top: 9px;
+            transform: rotate(135deg);
+          }
+
+          .hamburger-icon.open span:nth-child(2) {
+            opacity: 0;
+            left: -40px;
+          }
+
+          .hamburger-icon.open span:nth-child(3) {
+            top: 9px;
+            transform: rotate(-135deg);
+          }
 
           .custom-logo {
             height: 40px;
@@ -139,14 +170,16 @@ const Navigation = () => {
             <button
               className="navbar-toggler"
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
               aria-controls="navbarNav"
               aria-expanded={isNavExpanded}
               aria-label="Toggle navigation"
               onClick={() => setIsNavExpanded(!isNavExpanded)}
             >
-              <span className="hamburger-icon"></span>
+              <div className={`hamburger-icon ${isNavExpanded ? "open" : ""}`}>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </button>
 
             <div 
