@@ -14,9 +14,7 @@ import BoxScores from "./BoxScores";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-// Simple Footer Component for the copyright signature
 const Footer = () => {
-  const year = new Date().getFullYear();
   return (
     <footer className="text-center py-4 mt-auto" style={{ borderTop: '1px solid #eee', color: '#6c757d' }}>
       <div className="container">
@@ -29,7 +27,6 @@ const Footer = () => {
 function App() {
   return (
     <Router>
-      {/* Flex container to keep footer at the bottom */}
       <div style={{ 
         display: 'flex', 
         flexDirection: 'column', 
@@ -51,7 +48,6 @@ function App() {
           </Routes>
         </div>
 
-        {/* Signature/Copyright Footer */}
         <Footer />
       </div>
     </Router>
